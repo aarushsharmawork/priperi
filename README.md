@@ -35,7 +35,7 @@
 
 ---
 
-## 👑 Admin Panel App (`Adminpanel`)
+##  Admin Panel App (`Adminpanel`)
 
 The **Admin Panel** is a separate, dedicated administrative utility designed for managing user onboarding and system control without exposing sign-up logic inside the client application.
 
@@ -46,7 +46,7 @@ The **Admin Panel** is a separate, dedicated administrative utility designed for
 
 ---
 
-## 📱 Client App (`priperi`)
+##  Client App (`priperi`)
 
 The **Client Application** provides a polished, interactive login interface for end users.
 
@@ -63,7 +63,7 @@ The **Client Application** provides a polished, interactive login interface for 
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 priperi/
@@ -90,7 +90,7 @@ priperi/
 
 ---
 
-## 🔒 Security Analysis & Firebase Rules
+##  Security Analysis & Firebase Rules
 
 > [!IMPORTANT]
 > **API Keys & Firebase Authentication**:
@@ -103,7 +103,7 @@ priperi/
 
 ---
 
-## 📦 Build Artifacts
+##  Build Artifacts
 Pre-built APKs are included in the project root:
 - [Adminpanel_1.0.apk](file:///Users/aarushsharma/priperi/priperi/Adminpanel_1.0.apk): Admin Control Panel APK
 - [priperi_1.0.apk](file:///Users/aarushsharma/priperi/priperi/priperi_1.0.apk): Client User App APK
