@@ -1,35 +1,76 @@
-plugins {
-	id 'com.android.application'
-}
+plugins { id 'com.android.application' }
 
 android {
-	compileSdk 34
-	
-	useLibrary 'org.apache.http.legacy'
-	
-	defaultConfig {
-		applicationId "com.priperi"
-		namespace "com.priperi"
-		minSdkVersion 21
-		targetSdkVersion 28
-		versionCode 1
-		versionName "1.0"
-	}
-	
-	buildTypes {
-		release {
-			minifyEnabled false
-			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-		}
-	}
+    namespace 'com.priperi'
+    compileSdk 37
+    defaultConfig {
+        applicationId 'com.priperi'
+        minSdk 26
+        targetSdk 36
+        versionCode 47
+        versionName '2.15.0'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    buildFeatures { buildConfig true }
+    def relayUrl = providers.gradleProperty('priperiBackendUrl').getOrElse('')
+    def publicKey = providers.gradleProperty('priperiSupabaseKey').getOrElse('')
+    if (publicKey.startsWith('sb_secret_')) throw new GradleException('Use a Supabase publishable key, never a server secret, in the Android app.')
+    if (publicKey.startsWith('eyJ')) {
+        try {
+            def claims = new groovy.json.JsonSlurper().parseText(new String(java.util.Base64.urlDecoder.decode(publicKey.split('\\.')[1]), 'UTF-8'))
+            if (claims.role != 'anon') throw new IllegalArgumentException()
+        } catch (Exception ignored) { throw new GradleException('Only the public anon key is allowed in the Android app.') }
+    } else if (!publicKey.isEmpty() && !publicKey.startsWith('sb_publishable_')) {
+        throw new GradleException('Use the Supabase project publishable key for Android.')
+    }
+    defaultConfig {
+        buildConfigField 'String', 'BACKEND_URL', '"' + relayUrl.replace('\\', '\\\\').replace('"', '\\"') + '"'
+        buildConfigField 'String', 'SUPABASE_KEY', '"' + publicKey.replace('\\', '\\\\').replace('"', '\\"') + '"'
+        buildConfigField 'boolean', 'ALLOW_TEST_DEVICES', 'false'
+    }
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'; versionNameSuffix '-dev'
+            // Explicit build-time QA option. Never enabled by intents or runtime settings.
+            buildConfigField 'boolean', 'ALLOW_TEST_DEVICES', providers.gradleProperty('priperiTestDevices').getOrElse('false') == 'true' ? 'true' : 'false'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        secureTest {
+            initWith release
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-secure-test'
+            signingConfig signingConfigs.debug
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            matchingFallbacks = ['release']
+            buildConfigField 'boolean', 'ALLOW_TEST_DEVICES', 'false'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    lint { abortOnError true; checkReleaseBuilds true }
+    testOptions { unitTests.returnDefaultValues = true }
 }
 
 dependencies {
-	implementation fileTree(dir: 'libs', include: ['*.jar'])
-	implementation 'androidx.appcompat:appcompat:1.7.1'
-	implementation 'com.google.android.material:material:1.12.0'
-	implementation platform('com.google.firebase:firebase-bom:34.1.0')
-	implementation 'com.google.firebase:firebase-auth'
-	implementation 'com.google.code.gson:gson:2.11.0'
-	implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'com.google.zxing:core:3.5.4'
+    implementation 'androidx.appcompat:appcompat:1.8.0'
+    implementation 'androidx.webkit:webkit:1.18.0'
+    implementation 'androidx.biometric:biometric:1.1.0'
+    implementation 'com.google.android.material:material:1.14.0'
+    implementation platform('com.google.firebase:firebase-bom:35.1.0')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-installations'
+    implementation 'com.google.crypto.tink:tink-android:1.24.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
 }

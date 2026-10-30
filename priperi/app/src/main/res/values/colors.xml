@@ -1,7 +1,13 @@
 <resources>
-	<color name="colorPrimary">#D165FF</color>
-	<color name="colorPrimaryDark">#8A5CF6</color>
-	<color name="colorAccent">#D165FF</color>
-	<color name="colorControlHighlight">#BA68C8</color>
-	<color name="colorControlNormal">#D165FF</color>
+<color name="accent">#246B68</color>
+<color name="on_accent">#FFFFFF</color>
+<color name="page">#F2F5F6</color>
+<color name="surface">#FFFFFF</color>
+<color name="ink">#1C2B32</color>
+<color name="muted">#60717A</color>
+<color name="line">#DFE7E9</color>
+<color name="soft">#DBEEEA</color>
+<color name="danger">#AE3543</color>
+<color name="icon_background">#246B68</color>
+<color name="qr_ink">#122E33</color><color name="qr_paper">#E2F1ED</color>
 </resources>

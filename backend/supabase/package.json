@@ -1,0 +1,17 @@
+{
+  "name": "priperi-backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "deno check functions/relay/index.ts",
+    "test:edge": "deno test test/deno-runtime.test.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.118.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.11",
+    "deno": "2.9.6"
+  }
+}

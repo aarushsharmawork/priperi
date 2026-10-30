@@ -1,552 +1,132 @@
 package com.priperi;
 
-import android.animation.*;
-import android.app.*;
-import android.app.Activity;
-import android.content.*;
-import android.content.Context;
+import android.app.KeyguardManager;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.*;
-import android.graphics.*;
-import android.graphics.drawable.*;
-import android.media.*;
-import android.net.*;
-import android.net.Uri;
-import android.os.*;
 import android.os.Bundle;
-import android.os.Vibrator;
-import android.text.*;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.text.style.*;
-import android.util.*;
-import android.view.*;
+import android.text.InputType;
 import android.view.View;
-import android.view.View.*;
-import android.view.animation.*;
-import android.webkit.*;
 import android.widget.*;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import androidx.annotation.*;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import java.io.*;
-import java.io.InputStream;
-import java.text.*;
-import java.util.*;
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.regex.*;
-import org.json.*;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity {
-	
-	private Timer _timer = new Timer();
-	
-	private String limits = "";
-	
-	private ArrayList<String> limit = new ArrayList<>();
-	
-	private LinearLayout l_1;
-	private TextView eyes;
-	private CardView cv;
-	private LinearLayout cv_inside;
-	private LinearLayout usr_nameid;
-	private LinearLayout mt2;
-	private LinearLayout usr_mailid;
-	private LinearLayout mt3;
-	private LinearLayout usr_passid;
-	private LinearLayout log_l;
-	private LinearLayout usr_img;
-	private LinearLayout usr_namel;
-	private EditText usr_name;
-	private LinearLayout mail;
-	private LinearLayout usr_maill;
-	private EditText usr_mail;
-	private LinearLayout pass;
-	private LinearLayout usr_passl;
-	private EditText usr_pass;
-	private LinearLayout eye;
-	private ImageView imageview1;
-	private Button log;
-	
-	private TimerTask timer;
-	private SharedPreferences view;
-	private Vibrator vibrate;
-	private ProgressDialog progress;
-	private TimerTask load;
-	private Intent transfer = new Intent();
-	private Intent usr_ = new Intent();
-	private SharedPreferences usr_n;
-	private FirebaseAuth login;
-	private OnCompleteListener<AuthResult> _login_create_user_listener;
-	private OnCompleteListener<AuthResult> _login_sign_in_listener;
-	private OnCompleteListener<Void> _login_reset_password_listener;
-	private OnCompleteListener<Void> login_updateEmailListener;
-	private OnCompleteListener<Void> login_updatePasswordListener;
-	private OnCompleteListener<Void> login_emailVerificationSentListener;
-	private OnCompleteListener<Void> login_deleteUserListener;
-	private OnCompleteListener<Void> login_updateProfileListener;
-	private OnCompleteListener<AuthResult> login_phoneAuthListener;
-	private OnCompleteListener<AuthResult> login_googleSignInListener;
-	private RequestNetwork net;
-	private RequestNetwork.RequestListener _net_request_listener;
-	
-	@Override
-	protected void onCreate(Bundle _savedInstanceState) {
-		super.onCreate(_savedInstanceState);
-		setContentView(R.layout.main);
-		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
-		initializeLogic();
-	}
-	
-	private void initialize(Bundle _savedInstanceState) {
-		l_1 = findViewById(R.id.l_1);
-		eyes = findViewById(R.id.eyes);
-		cv = findViewById(R.id.cv);
-		cv_inside = findViewById(R.id.cv_inside);
-		usr_nameid = findViewById(R.id.usr_nameid);
-		mt2 = findViewById(R.id.mt2);
-		usr_mailid = findViewById(R.id.usr_mailid);
-		mt3 = findViewById(R.id.mt3);
-		usr_passid = findViewById(R.id.usr_passid);
-		log_l = findViewById(R.id.log_l);
-		usr_img = findViewById(R.id.usr_img);
-		usr_namel = findViewById(R.id.usr_namel);
-		usr_name = findViewById(R.id.usr_name);
-		mail = findViewById(R.id.mail);
-		usr_maill = findViewById(R.id.usr_maill);
-		usr_mail = findViewById(R.id.usr_mail);
-		pass = findViewById(R.id.pass);
-		usr_passl = findViewById(R.id.usr_passl);
-		usr_pass = findViewById(R.id.usr_pass);
-		eye = findViewById(R.id.eye);
-		imageview1 = findViewById(R.id.imageview1);
-		log = findViewById(R.id.log);
-		view = getSharedPreferences("view", Activity.MODE_PRIVATE);
-		vibrate = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-		usr_n = getSharedPreferences("usr_n", Activity.MODE_PRIVATE);
-		login = FirebaseAuth.getInstance();
-		net = new RequestNetwork(this);
-		
-		usr_name.addTextChangedListener(new TextWatcher() {
-			@Override
-			public void onTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {
-				final String _charSeq = _param1.toString();
-				
-			}
-			
-			@Override
-			public void beforeTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {
-				
-			}
-			
-			@Override
-			public void afterTextChanged(Editable _param1) {
-				
-			}
-		});
-		
-		usr_mail.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View _view) {
-				
-			}
-		});
-		
-		usr_pass.addTextChangedListener(new TextWatcher() {
-			@Override
-			public void onTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {
-				final String _charSeq = _param1.toString();
-				if (_charSeq.length() > 15) {
-					limits = _charSeq.substring((int)(0), (int)(14));
-					usr_pass.setText("");
-				}
-				if (_charSeq.length() == 0) {
-					usr_pass.append(limits);
-				}
-			}
-			
-			@Override
-			public void beforeTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {
-				
-			}
-			
-			@Override
-			public void afterTextChanged(Editable _param1) {
-				
-			}
-		});
-		
-		imageview1.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View _view) {
-				if (view.getString("lol", "").equals("lol")) {
-					imageview1.setImageResource(R.drawable.ic_visibility_off_black);
-					usr_pass.setTransformationMethod(android.text.method.PasswordTransformationMethod.getInstance());
-					view.edit().remove("lol").commit();
-				} else {
-					imageview1.setImageResource(R.drawable.ic_remove_red_eye_black);
-					usr_pass.setTransformationMethod(android.text.method.HideReturnsTransformationMethod.getInstance());
-					view.edit().putString("lol", "lol").commit();
-				}
-				eyes.setText("hide");
-				eyes.setText("show");
-			}
-		});
-		
-		log.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View _view) {
-				if (SketchwareUtil.isConnected(getApplicationContext())) {
-					if (usr_name.getText().toString().equals("")) {
-						((EditText)usr_name).setError("");
-					} else {
-						if ((usr_mail.getText().toString().length() == 0) && (usr_pass.getText().toString().length() == 0)) {
-							((EditText)usr_mail).setError("");
-							((EditText)usr_pass).setError("");
-						} else {
-							login.signInWithEmailAndPassword(usr_mail.getText().toString(), usr_pass.getText().toString()).addOnCompleteListener(MainActivity.this, _login_sign_in_listener);
-						}
-					}
-				} else {
-					SketchwareUtil.showMessage(getApplicationContext(), "User Not Connected To Internet");
-				}
-				log.setOnTouchListener(new android.view.View.OnTouchListener() {
-					@Override
-					public boolean onTouch(android.view.View v, android.view.MotionEvent event) {
-						
-						if (event.getAction() == android.view.MotionEvent.ACTION_DOWN) {
-							
-							// Pressed — moves down and slightly shrinks
-							v.animate()
-							.translationY(5)
-							.scaleX(0.97f)
-							.scaleY(0.97f)
-							.setDuration(80)
-							.start();
-							
-						} 
-						else if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
-							
-							// Released — returns smoothly
-							v.animate()
-							.translationY(0)
-							.scaleX(1f)
-							.scaleY(1f)
-							.setDuration(100)
-							.start();
-							
-							v.performClick();
-							
-						} 
-						else if (event.getAction() == android.view.MotionEvent.ACTION_CANCEL) {
-							
-							v.animate()
-							.translationY(0)
-							.scaleX(1f)
-							.scaleY(1f)
-							.setDuration(100)
-							.start();
-						}
-						
-						return true;
-					}
-				});
-			}
-		});
-		
-		_net_request_listener = new RequestNetwork.RequestListener() {
-			@Override
-			public void onResponse(String _param1, String _param2, HashMap<String, Object> _param3) {
-				final String _tag = _param1;
-				final String _response = _param2;
-				final HashMap<String, Object> _responseHeaders = _param3;
-				
-			}
-			
-			@Override
-			public void onErrorResponse(String _param1, String _param2) {
-				final String _tag = _param1;
-				final String _message = _param2;
-				
-			}
-		};
-		
-		login_updateEmailListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		login_updatePasswordListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		login_emailVerificationSentListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		login_deleteUserListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		login_phoneAuthListener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> task) {
-				final boolean _success = task.isSuccessful();
-				final String _errorMessage = task.getException() != null ? task.getException().getMessage() : "";
-				
-			}
-		};
-		
-		login_updateProfileListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		login_googleSignInListener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> task) {
-				final boolean _success = task.isSuccessful();
-				final String _errorMessage = task.getException() != null ? task.getException().getMessage() : "";
-				
-			}
-		};
-		
-		_login_create_user_listener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		_login_sign_in_listener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				if (_success) {
-					log.setScaleX((float)(1.2d));
-					log.setScaleY((float)(1.2d));
-					timer = new TimerTask() {
-						@Override
-						public void run() {
-							runOnUiThread(new Runnable() {
-								@Override
-								public void run() {
-									log.setScaleX((float)(1.0d));
-									log.setScaleY((float)(1.0d));
-								}
-							});
-						}
-					};
-					_timer.schedule(timer, (int)(122));
-					vibrate.vibrate((long)(20));
-					usr_n.edit().putString("usrname", usr_name.getText().toString()).commit();
-					progress = new ProgressDialog(MainActivity.this);
-					progress.setCanceledOnTouchOutside(false);
-					progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-					progress.setCancelable(false);
-					load = new TimerTask() {
-						@Override
-						public void run() {
-							runOnUiThread(new Runnable() {
-								@Override
-								public void run() {
-									progress.setMessage("Please Wait");
-								}
-							});
-						}
-					};
-					_timer.scheduleAtFixedRate(load, (int)(0), (int)(1000));
-					progress.show();
-					load = new TimerTask() {
-						@Override
-						public void run() {
-							runOnUiThread(new Runnable() {
-								@Override
-								public void run() {
-									progress.setMessage("Please Wait.");
-								}
-							});
-						}
-					};
-					_timer.scheduleAtFixedRate(load, (int)(200), (int)(800));
-					load = new TimerTask() {
-						@Override
-						public void run() {
-							runOnUiThread(new Runnable() {
-								@Override
-								public void run() {
-									progress.setMessage("Please Wait..");
-								}
-							});
-						}
-					};
-					_timer.scheduleAtFixedRate(load, (int)(400), (int)(600));
-					load = new TimerTask() {
-						@Override
-						public void run() {
-							runOnUiThread(new Runnable() {
-								@Override
-								public void run() {
-									progress.setMessage("Please Wait...");
-								}
-							});
-						}
-					};
-					_timer.scheduleAtFixedRate(load, (int)(600), (int)(400));
-					timer = new TimerTask() {
-						@Override
-						public void run() {
-							runOnUiThread(new Runnable() {
-								@Override
-								public void run() {
-									transfer.setAction(Intent.ACTION_VIEW);
-									transfer.putExtra("transfers", "w");
-									transfer.setClass(getApplicationContext(), AfterActivity.class);
-									startActivity(transfer);
-								}
-							});
-						}
-					};
-					_timer.schedule(timer, (int)(800));
-				} else {
-					SketchwareUtil.showMessage(getApplicationContext(), "Incorrect Mail Id Or Incorrect Password");
-				}
-			}
-		};
-		
-		_login_reset_password_listener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				
-			}
-		};
-	}
-	
-	private void initializeLogic() {
-		SketchwareUtil.showMessage(getApplicationContext(), "WelcomeUser");
-		log.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)30, 0xFF8A5CF6));
-		eyes.setVisibility(View.GONE);
-		view.edit().putString("lol", "lol").commit();
-		usr_mail.setSingleLine(true);
-		
-		usr_mail.setOnKeyListener(new View.OnKeyListener() {
-			@Override
-			public boolean onKey(View v, int keyCode, KeyEvent event) {
-				return keyCode == KeyEvent.KEYCODE_ENTER;
-			}
-		});
-		usr_pass.setSingleLine(true);
-		
-		usr_pass.setOnKeyListener(new View.OnKeyListener() {
-			@Override
-			public boolean onKey(View v, int keyCode, KeyEvent event) {
-				return keyCode == KeyEvent.KEYCODE_ENTER;
-			}
-		});
-		usr_name.setSingleLine(true);
-		
-		usr_name.setOnKeyListener(new View.OnKeyListener() {
-			@Override
-			public boolean onKey(View v, int keyCode, KeyEvent event) {
-				return keyCode == KeyEvent.KEYCODE_ENTER;
-			}
-		});
-	}
-	
-	
-	@Deprecated
-	public void showMessage(String _s) {
-		Toast.makeText(getApplicationContext(), _s, Toast.LENGTH_SHORT).show();
-	}
-	
-	@Deprecated
-	public int getLocationX(View _v) {
-		int _location[] = new int[2];
-		_v.getLocationInWindow(_location);
-		return _location[0];
-	}
-	
-	@Deprecated
-	public int getLocationY(View _v) {
-		int _location[] = new int[2];
-		_v.getLocationInWindow(_location);
-		return _location[1];
-	}
-	
-	@Deprecated
-	public int getRandom(int _min, int _max) {
-		Random random = new Random();
-		return random.nextInt(_max - _min + 1) + _min;
-	}
-	
-	@Deprecated
-	public ArrayList<Double> getCheckedItemPositionsToArray(ListView _list) {
-		ArrayList<Double> _result = new ArrayList<Double>();
-		SparseBooleanArray _arr = _list.getCheckedItemPositions();
-		for (int _iIdx = 0; _iIdx < _arr.size(); _iIdx++) {
-			if (_arr.valueAt(_iIdx))
-			_result.add((double)_arr.keyAt(_iIdx));
-		}
-		return _result;
-	}
-	
-	@Deprecated
-	public float getDip(int _input) {
-		return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, _input, getResources().getDisplayMetrics());
-	}
-	
-	@Deprecated
-	public int getDisplayWidthPixels() {
-		return getResources().getDisplayMetrics().widthPixels;
-	}
-	
-	@Deprecated
-	public int getDisplayHeightPixels() {
-		return getResources().getDisplayMetrics().heightPixels;
-	}
-}
+public final class MainActivity extends GuardedActivity {
+    private LinearLayout root;
+    private TextView status;
+    private EditText username,password,previousPassword;
+    private MaterialButton submit;
+    private boolean busy,rendered,returning,waitingForNotificationPermission;
+    @Override protected void onCreate(Bundle saved){super.onCreate(saved);root=Ui.page(this);}
+    @Override protected void onResume(){
+        super.onResume();if(environmentBlocked||waitingForNotificationPermission)return;
+        if(!rendered&&!busy&&Notices.requestAtStart(this)){
+            waitingForNotificationPermission=true;root.removeAllViews();LinearLayout body=Ui.scroll(this,root);Ui.space(this,body,60);body.addView(Ui.title(this,"Welcome to Priperi",28));Ui.space(this,body,16);body.addView(Ui.text(this,"Choose whether you’d like new message alerts. You can change this later in Settings.",16,R.color.muted));return;
+        }
+        if(!rendered&&!busy)route();
+    }
+    @Override public void onRequestPermissionsResult(int request,String[] permissions,int[] results){
+        super.onRequestPermissionsResult(request,permissions,results);
+        if(request==Notices.STARTUP_PERMISSION){waitingForNotificationPermission=false;Notices.startupPermissionResult(this,results);if(!environmentBlocked&&!rendered&&!busy)route();}
+    }
+    private boolean alive(){return !isFinishing()&&!isDestroyed()&&!environmentBlocked;}
+    private void route(){
+        busy=true;root.removeAllViews();root.addView(Ui.loading(this,"Checking this phone…"),new LinearLayout.LayoutParams(-1,-1));
+        Repository.local(this,v->{
+            if(v.transferIn()!=null&&v.transferIn().optBoolean("recovery"))return new JSONObject().put("recoveryPending",true);if(v.transferOut()!=null||v.transferIn()!=null)return new JSONObject().put("movePending",true);
+            if(v.resetRequest()!=null)return new JSONObject().put("resetPending",true);
+            if(Session.localSessionMatches(v))return new JSONObject().put("open",true);if(Session.uid()!=null)Session.forget();
+            try{JSONObject state=Session.deviceStatus(v);if(v.account()!=null&&!state.optBoolean("registered",true)&&v.policyNeedsCheck()){SettingsActivity.removeLocalAccount(this,v);return new JSONObject().put("newStart",true);}return state.put("localAccount",v.account()!=null);}
+            catch(Session.BackendException error){if("device-key-missing".equals(error.reason))return new JSONObject().put("keyMissing",true);if("account-expired".equals(error.reason)){SettingsActivity.removeLocalAccount(this,v);return new JSONObject().put("newStart",true);}if(v.account()!=null)return new JSONObject().put("registered",true).put("offline",true);throw error;}
+            catch(java.io.IOException error){if(v.account()!=null)return new JSONObject().put("registered",true).put("offline",true);throw error;}
+        },state->{busy=false;if(!alive())return;if(state.optBoolean("keyMissing")){missingKey();return;}if(state.optBoolean("newStart")){rendered=false;route();return;}if(state.optBoolean("recoveryPending")){recoveryPending();return;}if(state.optBoolean("movePending")){pendingMove();return;}if(state.optBoolean("open")){openInbox();return;}if(state.optBoolean("resetPending")){resetPending();return;}
+            if(state.optBoolean("localAccount")&&!state.optBoolean("registered")){missingAccount();return;}
+            if(state.optBoolean("replacement")){replacementForm();username.setText(state.optString("pendingUsername"));username.setEnabled(false);return;}
+            form(state.optBoolean("registered"),state.optString("pendingUsername"));if(state.optBoolean("offline"))status.setText("You’re offline. Connect to the internet to sign in.");
+        },message->{busy=false;if(!alive())return;root.removeAllViews();LinearLayout content=Ui.scroll(this,root);Ui.space(this,content,60);content.addView(Ui.title(this,"Couldn’t check this phone",26));Ui.space(this,content,12);content.addView(Ui.text(this,message,15,R.color.muted));Ui.space(this,content,20);content.addView(Ui.button(this,"Try again",true,v->route()));});
+    }
+    private void form(boolean registered,String pendingName){
+        rendered=true;returning=registered;root.removeAllViews();LinearLayout body=Ui.scroll(this,root);Ui.space(this,body,30);
+        LinearLayout brand=Ui.row(this);ImageView icon=Ui.symbol(this,"brand",38,R.color.accent);brand.addView(icon);TextView word=Ui.title(this,"Priperi",27);LinearLayout.LayoutParams nameParams=new LinearLayout.LayoutParams(-2,-2);nameParams.setMarginStart(Ui.dp(this,12));brand.addView(word,nameParams);body.addView(brand);
+        Ui.space(this,body,36);body.addView(Ui.title(this,registered?"Welcome back":"Let’s set up your account",28));Ui.space(this,body,10);
+        body.addView(Ui.text(this,registered?"This phone is linked to your account. Enter your password to open your chats.":"Choose a username so people can find you, then set a password for this phone.",16,R.color.muted));Ui.space(this,body,28);
+        LinearLayout card=Ui.card(this);body.addView(card,new LinearLayout.LayoutParams(-1,-2));
+        if(!registered){username=Ui.input(this,card,"Username",InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);username.setText(pendingName);username.setEnabled(pendingName.isEmpty());card.addView(Ui.text(this,"Unique to you. You can change it later.",12,R.color.muted));Ui.space(this,card,14);}else username=null;
+        password=Ui.input(this,card,"Password",InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        if(!registered){card.addView(Ui.text(this,"12–72 characters. Include uppercase, lowercase, a number and a symbol.",12,R.color.muted));Ui.space(this,card,14);}
+        status=Ui.status(this,card);submit=Ui.button(this,"Continue",true,v->authenticate());card.addView(submit,new LinearLayout.LayoutParams(-1,-2));
+        password.setOnEditorActionListener((v,action,event)->{if(action==android.view.inputmethod.EditorInfo.IME_ACTION_DONE){authenticate();return true;}return false;});password.setImeOptions(android.view.inputmethod.EditorInfo.IME_ACTION_DONE);
+        if(!registered)body.addView(Ui.button(this,"Restore account from recovery backup",false,v->startActivity(new Intent(this,RecoveryActivity.class))));
+        if(!registered)body.addView(Ui.button(this,"Move an account to this phone",false,v->startActivity(new Intent(this,TransferActivity.class))));
+        if(registered)body.addView(Ui.button(this,"Forgot password or username?",false,v->confirmReset()));
+        Ui.space(this,body,24);LinearLayout note=Ui.row(this);note.addView(Ui.symbol(this,"shield",20,R.color.accent));TextView privacy=Ui.text(this,"One account on this phone. No email or phone number.",12,R.color.muted);LinearLayout.LayoutParams noteParams=new LinearLayout.LayoutParams(0,-2,1);noteParams.setMarginStart(Ui.dp(this,10));note.addView(privacy,noteParams);body.addView(note);
+        Ui.space(this,body,12);body.addView(Ui.text(this,"Create a recovery backup in Settings before uninstalling or clearing app data. Keep its recovery words separately.",12,R.color.muted));Ui.fadeIn(this,body);
+    }
+    private void recoveryPending(){rendered=true;root.removeAllViews();LinearLayout body=Ui.scroll(this,root);Ui.space(this,body,40);body.addView(Ui.title(this,"Account recovery paused",25));body.addView(Ui.text(this,"The encrypted recovery is saved on this installation. Resume to finish safely.",15,R.color.muted));body.addView(Ui.button(this,"Resume account recovery",true,v->startActivity(new Intent(this,RecoveryActivity.class))));}
+    private void pendingMove(){
+        rendered=true;root.removeAllViews();LinearLayout body=Ui.scroll(this,root);Ui.space(this,body,48);body.addView(Ui.title(this,"Account move paused",27));Ui.space(this,body,14);
+        body.addView(Ui.text(this,"Your unfinished move is saved on this phone. Resume it to finish, cancel it or safely return the account. Chats stay protected while the move is pending.",16,R.color.muted));Ui.space(this,body,24);
+        body.addView(Ui.button(this,"Resume account move",true,v->startActivity(new Intent(this,TransferActivity.class))));
+    }
+    private void missingKey(){
+        rendered=true;root.removeAllViews();LinearLayout body=Ui.scroll(this,root);Ui.space(this,body,40);body.addView(Ui.title(this,"This account’s key is missing",27));Ui.space(this,body,16);
+        body.addView(Ui.text(this,"This installation does not have the private key linked to the account on this phone. Uninstalling or clearing app data removes that key. Your password cannot recreate it, and reinstalling again will not fix it.",16,R.color.muted));Ui.space(this,body,22);
+        body.addView(Ui.button(this,"Restore account from recovery backup",true,v->startActivity(new Intent(this,RecoveryActivity.class))));
+        body.addView(Ui.button(this,"Create new account",false,v->replacementWarning()));
+        body.addView(Ui.button(this,"Recovery options",false,v->Ui.dialog(this).setTitle("What you can do").setMessage("If you saved a recovery kit before uninstalling, choose Restore account and use its file, 24 words and your current app password.\n\nIf another registered phone still holds the account, use its Move account option. An unfinished move may first need to be returned to that phone.\n\nTo start again, choose Create new account and confirm your previous account password. It creates a separate identity, never restores old chats, and schedules the previous account for deletion after 7 days of inactivity. Its username stays reserved until deletion.\n\nIf you also forgot that password or the account cannot be checked, ask the service owner for a reviewed reset. No phone identifier alone can authorise deletion.").setPositiveButton("Done",null).show()));
+        body.addView(Ui.button(this,"Check again",false,v->{rendered=false;route();}));
+    }
+    private void replacementWarning(){
+        if(busy)return;
+        Ui.dialog(this).setTitle("Start with a new account?").setMessage("Your previous chats and keys will not be available in the new account. It will have a new identity and needs a different available username.\n\nConfirm the previous account password to protect it from someone else requesting deletion. Only after the new account is created will the previous account be signed out and set to delete after 7 days of inactivity. Its username stays reserved until then.\n\nChoose Cancel if you want to try a transfer instead.").setNegativeButton("Cancel",null).setPositiveButton("Continue",(d,w)->replacementForm()).show();
+    }
+    private void replacementForm(){
+        rendered=true;root.removeAllViews();LinearLayout body=Ui.scroll(this,root);Ui.space(this,body,24);body.addView(Ui.title(this,"Create a new account",27));Ui.space(this,body,12);
+        body.addView(Ui.text(this,"Old chats cannot be recovered. After signup, the previous account will be deleted after 7 days of inactivity.",15,R.color.muted));Ui.space(this,body,18);
+        previousPassword=Ui.input(this,body,"Old password",InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        username=Ui.input(this,body,"New username",InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+        password=Ui.input(this,body,"New password",InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        body.addView(Ui.text(this,"12–72 characters. Include uppercase, lowercase, a number and a symbol.",12,R.color.muted));status=Ui.status(this,body);
+        submit=Ui.button(this,"Create new account",true,v->confirmReplacement());body.addView(submit);
+        body.addView(Ui.button(this,"Cancel",false,v->{if(!busy){previousPassword.setText("");password.setText("");missingKey();}}));
+    }
+    private void confirmReplacement(){
+        if(busy)return;String name=Ui.value(username),previous=previousPassword.getText().toString(),pass=password.getText().toString();
+        if(!Validation.username(name)){username.setError("Choose 3–24 lowercase letters, numbers or _. Start with a letter.");return;}
+        if(!Validation.password(previous)){previousPassword.setError("Enter your previous account password.");return;}
+        if(!Validation.password(pass)){password.setError("Use 12–72 characters with uppercase, lowercase, a number and a symbol.");return;}
+        Ui.dialog(this).setTitle("Create a separate account?").setMessage("Previous chats and keys will not return. The previous username will remain reserved until its account is deleted.\n\nAfter this new account is successfully created, the previous account will be signed out and deleted after 7 days of inactivity, even if its old setting was Never. Cleanup runs hourly while the service is available; outages can delay it. Contacts’ copies, exported files and provider logs or backups are outside app deletion.").setNegativeButton("Cancel",null).setPositiveButton("Create new account",(d,w)->{
+            if(busy||!alive())return;performAuthentication(name,pass,previous,true,null);
+        }).show();
+    }
+    private void authenticate(){
+        if(busy)return;String name=username==null?null:Ui.value(username),pass=password.getText().toString();
+        if(!returning&&!Validation.username(name)){username.setError("3–24 lowercase letters, numbers or _. Start with a letter.");return;}
+        if(!Validation.password(pass)){password.setError("Use 12–72 characters with uppercase, lowercase, a number and a symbol.");return;}
+        performAuthentication(name,pass,null,false,null);
+    }
+    private void performAuthentication(String name,String pass,String previous,boolean replacement,String token){
+        if(busy||!alive())return;busy=true;submit.setEnabled(false);password.setText("");if(previousPassword!=null)previousPassword.setText("");status.setText(replacement?"Creating your new account…":returning?"Signing in…":"Creating your account…");
+        Repository.local(this,v->{try{if(replacement)Session.replaceAccount(v,name,previous,pass,token);else Session.continueAccount(v,name,pass,token);return (String)null;}catch(Session.BackendException error){if(name!=null&&"signup-verification-required".equals(error.reason))return Session.signupBinding(v,name);throw error;}},binding->{
+            busy=false;if(!alive())return;if(binding==null){openInbox();return;}
+            char[] held=pass.toCharArray(),old=previous==null?null:previous.toCharArray();
+            SignupCheck.show(this,binding,verified->{String next=new String(held),prior=old==null?null:new String(old);java.util.Arrays.fill(held,'\0');if(old!=null)java.util.Arrays.fill(old,'\0');if(alive())performAuthentication(name,next,prior,replacement,verified);},error->{java.util.Arrays.fill(held,'\0');if(old!=null)java.util.Arrays.fill(old,'\0');if(alive()){submit.setEnabled(true);status.setText(error);}});
+        },message->{busy=false;if(!alive())return;submit.setEnabled(true);status.setText(message);});
+    }
+    private void missingAccount(){rendered=true;root.removeAllViews();LinearLayout body=Ui.scroll(this,root);Ui.space(this,body,50);body.addView(Ui.title(this,"This account was removed",26));Ui.space(this,body,12);body.addView(Ui.text(this,"Its username and server records are no longer available. Reset this phone’s saved app data to create a new account.",16,R.color.muted));body.addView(Ui.button(this,"Reset this phone",true,v->confirmReset()));status=Ui.status(this,body);}
+    private void resetPending(){rendered=true;root.removeAllViews();LinearLayout body=Ui.scroll(this,root);Ui.space(this,body,50);body.addView(Ui.title(this,"Finish account reset",26));Ui.space(this,body,12);body.addView(Ui.text(this,"The last response was interrupted. We’ll check the server before removing anything from this phone.",16,R.color.muted));body.addView(Ui.button(this,"Retry reset",true,v->confirmReset()));status=Ui.status(this,body);}
+    private void confirmReset(){
+        if(busy)return;
+        Ui.dialog(this).setTitle("Reset your account?").setMessage("Your username, account, queued messages and all chats saved in this app on this phone will be deleted. You’ll choose a new username and password. This cannot be undone.\n\nThis uses this phone’s existing private key. It cannot recover an account after that key is lost. Contacts’ copies and provider-retained logs or backups cannot be erased by the app.")
+            .setNegativeButton("Cancel",null).setPositiveButton("Reset account",(d,w)->{
+                KeyguardManager keyguard=getSystemService(KeyguardManager.class);
+                if(keyguard.isDeviceSecure()){Intent check=keyguard.createConfirmDeviceCredentialIntent("Reset Priperi","Confirm with this phone’s screen lock.");if(check!=null){startActivityForResult(check,102);return;}}
+                resetNow();
+            }).show();
+    }
+    @Override protected void onActivityResult(int request,int result,Intent data){super.onActivityResult(request,result,data);if(request==102&&result==RESULT_OK)resetNow();}
+    private void resetNow(){
+        if(busy)return;busy=true;if(submit!=null)submit.setEnabled(false);if(status!=null)status.setText("Resetting your account…");
+        Repository.local(this,v->{Session.resetAccount(v);SettingsActivity.removeLocalAccount(this,v);return true;},ok->{busy=false;if(!alive())return;Notices.clear(this);rendered=false;route();},message->{busy=false;if(!alive())return;if(submit!=null)submit.setEnabled(true);if(status!=null)status.setText(message);});
+    }
+    private void openInbox(){startActivity(new Intent(this,InboxActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK));finish();}
+}

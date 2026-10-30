@@ -1,0 +1,5 @@
+title: Priperi Push Sender
+description: Sends generic Android push alerts for Priperi. No database or account access.
+stage: GA
+includedPermissions:
+  - cloudmessaging.messages.create

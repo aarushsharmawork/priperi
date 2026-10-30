@@ -1,0 +1,2935 @@
+{
+  "appVersion": "2.15.0",
+  "sourceFileCount": 235,
+  "payloadFileCount": 247,
+  "fileGuideCount": 247,
+  "sourceInventory": [
+    {
+      "path": ".gitignore",
+      "sha256": "f9da175cc7cbc26885df4d250690c10c17e562fd558043082faaa2bfb2fefb89"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4580f15f2cd07688b57cd1d014243a435e3c796e8d57fcfa7c7664bd8f0cc1c6"
+    },
+    {
+      "path": "backend/deployment/APPROVAL-2.12.1.md",
+      "sha256": "069cd998f347a485eb25e1676a08c85f30be1479048f84ca19459f43c6e47be7"
+    },
+    {
+      "path": "backend/deployment/RECOVERY-2.12.md",
+      "sha256": "f3e65bca9319e3c2605cf9f7c93c1ab18e66a43cb444901cdcc4be9f98580608"
+    },
+    {
+      "path": "backend/deployment/SIGNUP-2.15.0.md",
+      "sha256": "684f3c3ab42b2ef0a31b1395df5b91c8f759dbe9461c100ec81b1cf1931beeea"
+    },
+    {
+      "path": "backend/deployment/fcm-sender-role.yaml",
+      "sha256": "f016a0fec87dc7f9da0965064c0745d28f967ecf906b55eeb64489850ffa0537"
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/.firebaserc",
+      "sha256": "61e37a71138de05d310d9bb04e4396c22baee2d55f80a7ef164f36698943c362"
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/README.md",
+      "sha256": "eb3c22984c09926669dd6df855a0cb1c88255cce31784d7cc632b9f1f71faa5a"
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/database.rules.json",
+      "sha256": "c5fdf198274a3577d64e8bc635829294d6bac922808bea6f6e06f7d91871a443"
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/firebase.json",
+      "sha256": "5d46784dc9396de4905621d3cdb0bc8aa243cb4414f4e038050e3a9265adf974"
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/firestore.indexes.json",
+      "sha256": "d90549686d2070599d4b969aff58ee007f2f1789b2dac388aa430d43693ef00a"
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/firestore.rules",
+      "sha256": "dfeef9cf91a71e018eccb4819c599ed914704520187823e75f371add38eb2910"
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/storage.rules",
+      "sha256": "57203fce98b5ccca96e55b5e83ba219a4b78e7f4cf98a4b6de7ad41ca92c3a98"
+    },
+    {
+      "path": "backend/qa/android-fixture.js",
+      "sha256": "1b5c83cf2c80599715bba9301be780e5948304b6bf8b73fc07b0900a6974711b"
+    },
+    {
+      "path": "backend/qa/catalog-security-readonly.sql",
+      "sha256": "4948830ba88a4a09350b93b4436a338294bd26ef4ee5e051eb7a06b1a0a42d06"
+    },
+    {
+      "path": "backend/qa/hosted-account-controls.js",
+      "sha256": "2b5f748a916bcd54c3a354d21441b59cf8d673e826504b830003f11c5f4b06c9"
+    },
+    {
+      "path": "backend/qa/hosted-security-readonly.js",
+      "sha256": "3ced24c450f687779d8999734318239eff425fe13da783fd9086e88c1debaf89"
+    },
+    {
+      "path": "backend/qa/hosted-sync-latency.js",
+      "sha256": "a3df1a2323d513020665f8ee38c6c40de82c43d28d66121c8e30353e28399f40"
+    },
+    {
+      "path": "backend/qa/push-lifecycle-trigger.js",
+      "sha256": "3950f8f00ab61fe263db9a00ea8dab6f1d5abda3302d57abb4bcd2882a6c5918"
+    },
+    {
+      "path": "backend/supabase/config.toml",
+      "sha256": "a72b3b42b1317900ca23d49c61cbbb90770cea9f00bd24d2db13c49d1acf8028"
+    },
+    {
+      "path": "backend/supabase/deno.json",
+      "sha256": "462431f4a14615ab921cac162cb6b181c5f268c5fa9426e1fcc6b43affe6937d"
+    },
+    {
+      "path": "backend/supabase/deno.lock",
+      "sha256": "e45b29cc87560a352a8240cc09350751c6abfdfcbe6bf47994eaeedb3b3909e3"
+    },
+    {
+      "path": "backend/supabase/functions/relay/account.js",
+      "sha256": "b5dde4843d9ad2c46f8ee04d423e8611ff2b38cb59fac8798bdb86293e412900"
+    },
+    {
+      "path": "backend/supabase/functions/relay/delegation.js",
+      "sha256": "5813602b333c689780031ef1c6f743a9bfc28c104e0377ee55f63f90976f53ed"
+    },
+    {
+      "path": "backend/supabase/functions/relay/groups.js",
+      "sha256": "be3f67f4c3ada2fecd90cf383c9240adb9c8c307629589d353ab39274518757b"
+    },
+    {
+      "path": "backend/supabase/functions/relay/handler.js",
+      "sha256": "905d1e3b336ed27922838dc028e347124f7b3ec4fd83d2800842253f2a13d75f"
+    },
+    {
+      "path": "backend/supabase/functions/relay/index.ts",
+      "sha256": "6b46336700872e6a49398849dd882d174a1b4078c973fb32404cc84565348115"
+    },
+    {
+      "path": "backend/supabase/functions/relay/policy.js",
+      "sha256": "9076ab66e0e579f420527c2509c7c9718558fbf696e97d891410a4e50de1d374"
+    },
+    {
+      "path": "backend/supabase/functions/relay/push.js",
+      "sha256": "dfda0df8be13d0b9fc8054e69bae499f33babebf5121e4a8d6ca0778113e5783"
+    },
+    {
+      "path": "backend/supabase/functions/relay/recovery.js",
+      "sha256": "2b1e4b8b5a98464a74d1ccbab6d0d8a59382c660cd9608ede18bcec4539577e7"
+    },
+    {
+      "path": "backend/supabase/functions/relay/runtime.d.ts",
+      "sha256": "c54c6cac185d2678ac509dfecf14f4f8612c6a1f624a43c0efe79ce4cf22d6c1"
+    },
+    {
+      "path": "backend/supabase/functions/relay/signup.js",
+      "sha256": "fe057a2773078660e09dbe4597301b35ef872354be18e00afe87d48ee24ca7ee"
+    },
+    {
+      "path": "backend/supabase/migrations/202610260001_relay.sql",
+      "sha256": "3d4c431a560d0cb245c4f0d667f1a6c44b1c75106ea58d3a6639bf235268aba1"
+    },
+    {
+      "path": "backend/supabase/migrations/202610260002_expiry.sql",
+      "sha256": "3d10f152302fcc1fd8d1f5ffcd9524342a986c4c6af4c1c3f651edea2f77c0f4"
+    },
+    {
+      "path": "backend/supabase/migrations/202610260003_retry_upgrade.sql",
+      "sha256": "a4eb05d55f3ce410cc8c9f44776a96bda0e80fe3ebb2a6f74b9a673830cc8149"
+    },
+    {
+      "path": "backend/supabase/migrations/202610260004_device_access.sql",
+      "sha256": "3527affdf00386c759cc113413905046250aa67f58f65ef529570f20d7626667"
+    },
+    {
+      "path": "backend/supabase/migrations/202610270005_contact_approval.sql",
+      "sha256": "bf1e9a937025378ba130071f618b648f70fdafd2a9d2411bc2a70362361bee12"
+    },
+    {
+      "path": "backend/supabase/migrations/202610270006_contact_names.sql",
+      "sha256": "a066979fac95eedfb5e410a04bbcf6ab8c152c8334c91804c972c672edd49a8b"
+    },
+    {
+      "path": "backend/supabase/migrations/202610270007_groups.sql",
+      "sha256": "579fe7d65e675d9f2a31391650d3fd1569607cf85a5c0acced72d310e13afe34"
+    },
+    {
+      "path": "backend/supabase/migrations/202610270008_group_cache.sql",
+      "sha256": "32c6a5ee5ca08a1789720fce163cb2b1ba0db053c5027230c0d831cfbb8c503f"
+    },
+    {
+      "path": "backend/supabase/migrations/202610270009_group_storage_caps.sql",
+      "sha256": "6dbd5f07724a7830f6366905e5292eff955a240f3a56da6eb7a593575a82830d"
+    },
+    {
+      "path": "backend/supabase/migrations/202610270010_security_hardening.sql",
+      "sha256": "434649c888ecf28c09f17caa5aa4deac284fdfd5fe62f0dca3ebc411d5219446"
+    },
+    {
+      "path": "backend/supabase/migrations/202610270011_account_controls.sql",
+      "sha256": "bc9bbcc2b93df0431300f84e59ee0252acf5b2bd59541414d02debbd9d0b734a"
+    },
+    {
+      "path": "backend/supabase/migrations/202610280012_transfer_cleanup.sql",
+      "sha256": "54b5743171a8ecd65dd0eedf62a9c2c160cf2ec07bb78145e6497500d740b511"
+    },
+    {
+      "path": "backend/supabase/migrations/202610280013_sync_latency.sql",
+      "sha256": "ff8b56382d9850d681653b628596ed9a6e42c21086eadd991a8f261b3803855b"
+    },
+    {
+      "path": "backend/supabase/migrations/202610280014_reinstall_replacement.sql",
+      "sha256": "4ae75d8e16dd61fffea19d9a5b8a4df12a193df9ceeba36e5e6c34c123ff9b57"
+    },
+    {
+      "path": "backend/supabase/migrations/202610280015_recovery_kits.sql",
+      "sha256": "6b9ec591cac05e91a528832460824217d9dfaa65b11eb1cfca28d41e9fe4dae5"
+    },
+    {
+      "path": "backend/supabase/migrations/202610280016_conversation_approval.sql",
+      "sha256": "04f8c4a665deda1d957562ba03643dfa7947996612b45c4a2f85db51e9654824"
+    },
+    {
+      "path": "backend/supabase/migrations/202610300017_signup_admission.sql",
+      "sha256": "5c51df0dd8ae5695b3aaf839304756859cf3e11393177d7ee1d255bf143582a1"
+    },
+    {
+      "path": "backend/supabase/package-lock.json",
+      "sha256": "f9745474d7566f4c895f2075ffd77d55f5dda009439a7ba018ae2fe9e77b3f85"
+    },
+    {
+      "path": "backend/supabase/package.json",
+      "sha256": "e148c99457e9ad1eb2bf235c5a62fc7c6573bcd910a19f0a895006faf55dc748"
+    },
+    {
+      "path": "backend/supabase/test/android-server.js",
+      "sha256": "3ac0c8289a82d6297383d414d9614f60f9cb75a05ea29b0d8af569ee8bfd9980"
+    },
+    {
+      "path": "backend/supabase/test/database.js",
+      "sha256": "0947b11a27780fa2fda066bb7f3b2fa4aa05723ebfdadb30b14a45bc4be9c8a5"
+    },
+    {
+      "path": "backend/supabase/test/deno-runtime.test.ts",
+      "sha256": "43b6704f2b0491ff5ac3523582a4649bfda2410327421e4e6bdc902ba1de0280"
+    },
+    {
+      "path": "backend/supabase/test/endpoint-audit.test.js",
+      "sha256": "9e5fef6b336aaa2f660638bdca895895b53d94787de6b209ac348865f8bf9289"
+    },
+    {
+      "path": "backend/supabase/test/jwt.test.js",
+      "sha256": "b81d857eee80665512ec8874271dcb0d93c3711ba707261c15eba4d365289036"
+    },
+    {
+      "path": "backend/supabase/test/policy.test.js",
+      "sha256": "ac1a27e4fbe7ee07c057ea8ea2581ffefa0816afc385d2991521f4d2b52022e9"
+    },
+    {
+      "path": "backend/supabase/test/recovery.test.js",
+      "sha256": "f4514889906bce765ca32a0eda4f9bcffacf1b1c69ee7eed1cd8f3b0a3db9341"
+    },
+    {
+      "path": "backend/supabase/test/security.test.js",
+      "sha256": "3c88932ece468e1c90340826916ee2a53e24fb211b483f07145e95f982b2f4b8"
+    },
+    {
+      "path": "backend/supabase/test/signup-protection.test.js",
+      "sha256": "8a11d7c66753deafce242eef1d8189334114e9f9dff58fd01cd8f14551662c57"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "sha256": "65b5cee9102886c65ff933e4e033bd3c87ca62efa7f1a9c1e67e01bc7b35df69"
+    },
+    {
+      "path": "docs/GITHUB.md",
+      "sha256": "1eec164ec934c93373621b580b452e31e88c67cafe51404f70b1dd92f392b46a"
+    },
+    {
+      "path": "docs/PIPELINE.md",
+      "sha256": "f08b4c1d5fdaf894f2af4df62b7846c8fe79609ef8187f14ee81a4aa8aeadc83"
+    },
+    {
+      "path": "docs/RELEASE-REVIEW.md",
+      "sha256": "0fd85953dbc14ef7968819b3451367b3eb9ed53484edf8f9313fb7f92d5bc20f"
+    },
+    {
+      "path": "docs/SECURITY-AUDIT.md",
+      "sha256": "6bf9d2f20429bd90aeeb322cf5145a9a3a5c12fb3ec33929127193d8cc6bfd90"
+    },
+    {
+      "path": "docs/SECURITY-REVIEW.md",
+      "sha256": "eac00069fff4b223c36aeca51cc057d9f10391509ad1fed40926d3dd2460d637"
+    },
+    {
+      "path": "docs/SECURITY.md",
+      "sha256": "27ece933129c670d47315f14ed220a06ec03a647cc3e4912a0c552cfbdd58150"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "08d9a22ed5db51e2e235dc9bf0141494ba67f64a707a517889c4934afb7d6dde"
+    },
+    {
+      "path": "features_to_add.md",
+      "sha256": "c23eb090d89091f30b8af8976fa5556bd7647f34d0e9c6271a9d6e5d06d39d87"
+    },
+    {
+      "path": "priperi/NOTICE-bip39.txt",
+      "sha256": "c617bbf35b2315390dd1a92104590ad54c090ecc7d0a1b9b8c094988cd19a180"
+    },
+    {
+      "path": "priperi/app/build.gradle",
+      "sha256": "752ba93c5e8e8ab8a6e19c99b62a3471e2433470b28cfb02fc9e201269848e01"
+    },
+    {
+      "path": "priperi/app/proguard-rules.pro",
+      "sha256": "899b674be129743262ed03404b8bae9d85dbde43d21bfe783af00980ffc2887f"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/AccountControlsFlowTest.java",
+      "sha256": "395e97c29c0317e6cc4bd8bc016c5443a32169f6afdd651ae797c970c03f56ad"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/AppEntryFlowTest.java",
+      "sha256": "1bad79c400cc63c45552c57d45343d409195e4ec62e036138c7b14003e052497"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/AsyncDeliveryTest.java",
+      "sha256": "8cb78633c1b7620f0eb582428f86acc8e6582e68b66154ea6338468bbbeacff6"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/AutomaticStorageTest.java",
+      "sha256": "968528cdf43dda1b742d6a63e37c251aa55c55ce6b70922e187058a8c21c340d"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/BackupFlowTest.java",
+      "sha256": "403e7e0747f656262d24727466559d2cc931e1bae6fbd87dd72b4d9cfdba4b64"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/BatteryFlowTest.java",
+      "sha256": "e36d77288b6b329c70d9b6f0ad8ff847bfb0e9a636d39e0df8793ad816f934d8"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ChatPinFlowTest.java",
+      "sha256": "34e089a12b04060b5863c522003672231d7083cc5fc8e1eaac5d42d13d3b7eed"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ContactApprovalTest.java",
+      "sha256": "cde98bebc146167b6f355978cdb1e367033917eab61291078820b0716883fbec"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ContactCodeFlowTest.java",
+      "sha256": "fe749a55cb17f196fef57c0993435a7c5a5908fe31ff341e8643fb5d04285304"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ContactTrustTest.java",
+      "sha256": "c9b639b92de68dadcedeb2c04a950a346e5ed55d713f217ced11bca84e8edd31"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ConversationAlertsTest.java",
+      "sha256": "15f6b4d46c0c4d29f99e676e81c1c87f5313fc902a721558e7479758ad7d2353"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/CryptoStorageTest.java",
+      "sha256": "5d19d2aef73146990feb1d18cb8acc5b29dc9982a9adb5aee10f842b9c3cab02"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/DeliveryLatencyTest.java",
+      "sha256": "2ac786820e4c5f5eba9a69d31f0f0d59e46fdef42b6e86baaffd0c2206351a0c"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/DeviceFlowTest.java",
+      "sha256": "62d6accb38305f6272beb96f10fa0acd8809e5a4c446dacd36569d583b6615c1"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/DocumentResultTest.java",
+      "sha256": "f083157e5a7dce444c18d1f4f2d468097db6bb49ffc93eddc9d1da96da71ea7c"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/FeatureTenFlowTest.java",
+      "sha256": "3cb7621e033e22b75b6c91bf817832fd3cd2fb3c9c2c72eb9fd62cb07de2a2bd"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/GroupFlowTest.java",
+      "sha256": "3b4ddec9e54fb79d8923a8ac7a4b6de0476ea5f8d12e9ec745ab82da89431443"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/LiveContactApprovalTest.java",
+      "sha256": "fb4b6b2b79dc43a8e98a22e81d091aa65d5fb8aecc05c8c9de01f3d06b37632a"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/LiveGroupTest.java",
+      "sha256": "1599bf13d43c673776561111b89b339c9e8b411ebe38fcd898cac0992f1bb0f7"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/LivePushLifecycleTest.java",
+      "sha256": "c122c3ffbd561267400fa5853023458e4143f97ab79d46b45fe7410375f10acc"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/LivePushTest.java",
+      "sha256": "8671c00b7b8ebc5ba714c3b0633bd8e9280e12a34a02c6da0a2728acaa2a99d2"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/LiveRelayTest.java",
+      "sha256": "747b4a2c76ab2b7cbf38e2e838110d6da4e1345624d47a43a5771fffbfd2a821"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/MessageActionsFlowTest.java",
+      "sha256": "106312a398486b095400d726d53d233d62203a99c662e0f1ec1a211d8a8194fd"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/NavigationRecoveryTest.java",
+      "sha256": "fbcb0ee400822f2be4cfd357d7ddde387740939c14a6fcfbc859ff4e2ed28c19"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/NetworkInputTest.java",
+      "sha256": "be0cb844b424db81c3a216fe8ba8b754103ba021e1b25d49198aea469bd13784"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/NfcFlowTest.java",
+      "sha256": "c325659e9411728126dd77df6afea2976d23aae5a5ac86fc4f44d72e8f0a822b"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/NotificationRecoveryTest.java",
+      "sha256": "50794486cae83523fa5871bc3c6052f35d753ab00c423cdf131b58cdefe545b3"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/PoisonInboxCase.java",
+      "sha256": "82b71896bce3086aacd6a839a43f55b51e499236ccdab6e03c87b98cc0273e42"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/RecoveryFlowTest.java",
+      "sha256": "e54435b537ce9021d3fe95ce27cead90f0cecac521c9b2adcd4d4f9e3a8b84ff"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ReinstallRecoveryTest.java",
+      "sha256": "2c9fe109a50ada7ff2b0b3212137e4cd4317bdc546c02e69f6c594250bc0756a"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ReinstallReplacementTest.java",
+      "sha256": "4bf99f010adf3efff2ad96902970c87e614389784aebe75ddc147e8f22eb1df2"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/RelayFlowTest.java",
+      "sha256": "56c4b37667137eaa7ba2a01a3f5465557bc28db20c180bc43bf9409a459f1761"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ResilienceFlowTest.java",
+      "sha256": "0dba174a1321c4c944c7996ea7ed9595dedd7948f8d7ac13b0dd45ddb02d60bc"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ScreenLayoutTest.java",
+      "sha256": "ab9ce672b95c40047a3e540e57d9e9be046b0f312a384a3755529226239e713d"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/SecurityBoundaryTest.java",
+      "sha256": "81866ea1d75b44933b2bf1709214af872e6050b035c47c16f142e4a86942ce5f"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/SignupFlowTest.java",
+      "sha256": "a20fe6f459a40228be724e31fc09bc17b8ca060fdb4e93cfd2f976b238490a9d"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/StartupPermissionTest.java",
+      "sha256": "4687922d6b74ab4a17b0a09e1d863be39feb282d5a9c8af952089e480739417d"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/StorageFlowTest.java",
+      "sha256": "cc3bf640b91e63bb6ea5059e4f33c3740dbfb2fd1ace6732680274ac34f9f028"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/StrictDevicePolicyTest.java",
+      "sha256": "c99a22524121028ebd2079489c4d0829f9661563c4e0ed3cf9beeea98aafe5a9"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/SyncIndexTest.java",
+      "sha256": "8fd6bb0da54ce937b53b4a69020e8e330c07da890e2e0967e24f76a6ffc3075f"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/SyncResponsivenessTest.java",
+      "sha256": "0f397d050118b2e77c610cf0e0c3872caf6c0570fe67b4eab1c88655c5b21b4a"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/TestIdentityTrust.java",
+      "sha256": "d75dd73017f5aabd81bae0966e5daea51d05aa35ae745866bed170d1513c96ff"
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/UiSmokeTest.java",
+      "sha256": "052784f58cde4ed8ba1ac7f714d6fa6fb7fdf7e977e3ee8e485dad32696fc22d"
+    },
+    {
+      "path": "priperi/app/src/debug/res/xml/network_security_config.xml",
+      "sha256": "0c0d4843ba1d70ebf274aa0d466744e9bba355b92e1f00ab0597703fb1da69e0"
+    },
+    {
+      "path": "priperi/app/src/main/AndroidManifest.xml",
+      "sha256": "200f377d18e818f371f6496fc3cf2aaad63c003c0b40ac191bf63625e51b6cd5"
+    },
+    {
+      "path": "priperi/app/src/main/assets/NOTICE-bip39.txt",
+      "sha256": "c617bbf35b2315390dd1a92104590ad54c090ecc7d0a1b9b8c094988cd19a180"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/AccountPolicy.java",
+      "sha256": "b1305351574930605e108a2cca0a81116a179d6d0a2beac78a03cfbe31a790f4"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/AccountRecovery.java",
+      "sha256": "60a639f6229b6adb2361cf3a9ede68a1ca02929a3276b5e6fae4a86b4dc9f556"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/AccountTransfer.java",
+      "sha256": "f66626ab641ba77af96bbd859203338b278b7c7917f86b465b9497cd3dbccf1a"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/AppNavigation.java",
+      "sha256": "cea6aaccd56c55418117ffbe0a51a7b3e542d1ea839e25328a4fe165ec944e9a"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/BackupActivity.java",
+      "sha256": "96a3087daf8b8e89544d0a10675d2c359103c209fbfb07b2f59f280017d25ab7"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/BackupCodec.java",
+      "sha256": "68ea076b85c68dab19ef8f2cb6bd34a8ac8ae2676e7c44d3965dc9e5108583cc"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/BackupFiles.java",
+      "sha256": "fed06e80eea1d8b416d8d11ea3b151f24ebc344efaaf72b31bfa0277d6d19ed8"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/BiometricGate.java",
+      "sha256": "5913adead17e83cb5cd4f9340a288d507845ea33ce3414843e110c73a525b2a0"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ChatActivity.java",
+      "sha256": "27a0f5ca15016497914ddd7abc9672064649f911150d3d40bb58ce265e321d95"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ContactAllowance.java",
+      "sha256": "50e7f1cbaad9268aaff5301d064214bf1cc175d3559724ae1bfbc6714d0c35a4"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ContactCode.java",
+      "sha256": "a2653eb614747eb8e402d8116bc9c614d4343d428304195b3dc5439745e65023"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ContactCodeActivity.java",
+      "sha256": "d2e5804263ebac215abfac5acecf5d664c2167e938bc3b27d4682cca21365b51"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ConversationSurface.java",
+      "sha256": "e01c88b440a30ccfbcfb62105cb5c8ea48c66f6e3985074a7fdb754cd4fa9735"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Crypto.java",
+      "sha256": "8c91dd4795c6859c5959ad852b1716038e39c5918c9bb2865bfaa79cc27ad4aa"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/DeviceIdentity.java",
+      "sha256": "976efbf0d576b8ad2d44c401ac1b5abdf2ba95e61eb3d53a659fab5c43a09bb8"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/DeviceSecurity.java",
+      "sha256": "32a7936182bb5fa2b44719233328a8447d48c1612cfe64f83bf51a041fd692f6"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/DocumentUris.java",
+      "sha256": "13f21d0e222afdb54729f72c208d8be06a263b42558eac7b14627b551e7112c2"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/GroupDetailsActivity.java",
+      "sha256": "9d3bd7ee301253aaf087d528ff9d17e87f0b154f00f5ca68ceda3f5e20d0935f"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/GroupRepository.java",
+      "sha256": "471b18f685398285b8fc7bf7d4e39631be8b46a27fb441fc53d3cf7d224bfea6"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/GuardedActivity.java",
+      "sha256": "70a8c8ae3bf32eb9358080af6fe342fbeb9e964d20b8d412d8a48cfc43789508"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Icons.java",
+      "sha256": "2de96ee6ac5879ef75a47e60249e9e695aaa7b49bc78542c7f4fcfd1dfbe1bab"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/InboxActivity.java",
+      "sha256": "03a2190f73170919955df7294d26a78c61628d180360dffceb532959c65aa4df"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/JsonBounds.java",
+      "sha256": "71c4ce10e87689d7a1b286d7ae433b35074379d36fb27f007c295b278d6a97a9"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/KeyDelegation.java",
+      "sha256": "4b7be63de95000de0baec011033efaf3b84e0d7b7bb0da7b3de10d8649cc7f49"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MainActivity.java",
+      "sha256": "72e813b05fee8ce3e8ca1b09a6c876fa8e14191ce6108d09e8e990ef163c96e9"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MemberPicker.java",
+      "sha256": "5b98d3ad8fb6445ab858154def950c3518b8bcdc032612604a0a35b062bf42fb"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MessageActions.java",
+      "sha256": "4c7059e4ff75bf76793f6b04a7988e6eb5f4a09259717936c922b49dc004c295"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MessageContent.java",
+      "sha256": "3b5f9102f513d04ffece346b7e363e50af5db87d7366300c406a370abdb1e926"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MessageLinks.java",
+      "sha256": "0c135b40b4e3c34f12200ca279da85c3282c0be71f08e9fac049eccb7367a898"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MessageService.java",
+      "sha256": "22967dc4153c2fd80f3918cfa18b418860529021400a152d581e00537e4b1f49"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MuteControls.java",
+      "sha256": "17a98f17b777f9de1e4e98647054e4d12d4792ddcf5273ca32cb87b8f1fe48af"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/NfcContactPanel.java",
+      "sha256": "f9ca088826efb89747856c143d8d886ecda2b2ca16e192bfe2b2e98841009c73"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/NfcContactService.java",
+      "sha256": "cc5604494e4e3beb83ab3a3e48fa84e70aaf5ef9540f6a1d1835c9e159af71b3"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/NfcProtocol.java",
+      "sha256": "c964b6bb9c667cffbdfa17f1b3ccb5c4e7cff3f17176ba443a94941fab9a11ed"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/NfcShareLease.java",
+      "sha256": "a27c56039fd5f58a23de89d2ab6a29e291c6b6ef9b47cf172dc0803d6d8359b4"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Notices.java",
+      "sha256": "c1e9aefecc6181b23e0c83dd1216aac18e8b91f7c28cb3ceecf4a144cebad8d9"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/PriperiApp.java",
+      "sha256": "f2828637318b1151688746aeff18516707b5cc4c9e48b3255574e33d87e6d667"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/PrivateActivity.java",
+      "sha256": "3bf704dabe86e4382f72f002649bf27806b315d8fe3b8b511b8d1eb4759f9b1e"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/PushSyncService.java",
+      "sha256": "a229a46727006e7664e2d12274fb0be21df2c5c024ed4366bc3da0cf6f4c2f9a"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/RecordCodec.java",
+      "sha256": "2e753374bb4c15a6ea88fdb0e2966170fc679f9a2f1074388f189b0ed5d94095"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/RecoveryActivity.java",
+      "sha256": "e92111e70c5bc597aabf86f5a460c9eb72a2144103442328383fa7fa41866ee9"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/RecoveryBundle.java",
+      "sha256": "f029ce448d5aab2df36a5d09087df196cfb5aaba570cae8cfa24b3990354ee3d"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/RecoveryCipher.java",
+      "sha256": "1a928e1e7399a0e058af62c4ce208df02f3954d0647d6048dd6d7a4e9f5edd6f"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/RecoveryFiles.java",
+      "sha256": "931c03fca41443e2170da8ff97320f82022f4947d05026675cbb4972aaef8eb6"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ReplyGesture.java",
+      "sha256": "d0e847be0d9cf1ad5759440b6372082a305d04d33711e2cb2e390a4080b3e718"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Repository.java",
+      "sha256": "17725ffdeeab6c85bf4d6ea4298a7fb2d5f8e4bf637dbdc987e4e58c08224df2"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SendButton.java",
+      "sha256": "4f049b88819e6a909eb34e782678a12090bc8415812074132e27d62f8b9c1378"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Session.java",
+      "sha256": "e4762a552978600e2bde869de5f2913616ad7c693c97cce4faf3fcad868bab49"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SettingsActivity.java",
+      "sha256": "3948b59713295e4bab940aaf5a7b00d3a3e2ffae98e915f9bc65a9b295ffafcb"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SignupCheck.java",
+      "sha256": "a6a1630383d6cfce622f44de095ce8de36ca9d2d9beeeec7a84c21bbda02c6a2"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SplashActivity.java",
+      "sha256": "6d0cb8d394e4ac75c81eab48651a0c8358ed76137b373800e0359b8773b50db9"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/StartupMotion.java",
+      "sha256": "b8ee86ec4e42ca22cb534d662fbf08f7aed0743326fb2256e32c40d335d52f03"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SyncBudget.java",
+      "sha256": "0946b14eb23e6ca326be7b588df281974c095887b5d99607b30de50d8b70b805"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SyncCoordinator.java",
+      "sha256": "db85cf5cf6aa7c4d46fd1567d720ed2e3a6ac6942c86012310aec959e4b4a8fc"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SyncEngine.java",
+      "sha256": "8cdbabfa4716b6aa69aa088b40d6c6effbbc468147e901cc5ff6df2428fb134c"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SyncPace.java",
+      "sha256": "59e38401b629032db9fb71dbbca629ebd0bcc40bee0f063fbbb402081d597b2b"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/TransferActivity.java",
+      "sha256": "d0a914293febf9a8e4937f0169b2cfadb1e839468b16c482ddd72c02c97f92b8"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/TransferArchive.java",
+      "sha256": "943471fa800ea6890d70aee57b387c0ac5d522f9f6f57b35342cc60875a5abf6"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/TransferCipher.java",
+      "sha256": "26da6685c3f21f0955fd743853a93f2f73bde0579d7a74126823505c9948c4e2"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/TransferFiles.java",
+      "sha256": "83aada765e1d9af639dae7a35c6dc167a16846978c3d5e28e18a7e8628ad0321"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/TransferPhrase.java",
+      "sha256": "607152bef1102c6ad88067554864c46f8109c9d4dfb2443ad685c899fe2f9630"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Ui.java",
+      "sha256": "b11b437ac51f8a749a36284986265ea00ce12f868359a2bbe20e490ad2116672"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Validation.java",
+      "sha256": "0c5e336d1849e23c7286fb5f214322f4e49c95ddd277bf5caafd13a617ed888d"
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Vault.java",
+      "sha256": "1b8ce39bcdb707a1339055e6888f7628b713a806de35ad02d6f3a3c083a3dcf0"
+    },
+    {
+      "path": "priperi/app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "sha256": "d4373811e61f059c84cfbd85acdc854c9d13c1a08f26a67f55bb5588feedd3fd"
+    },
+    {
+      "path": "priperi/app/src/main/res/drawable/ic_notification.xml",
+      "sha256": "712d0cdd21d8e6d366c06dd5153c943e2f12aa201fdf1e2510defb0e9439ee79"
+    },
+    {
+      "path": "priperi/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "sha256": "58969dc75ae16e455bb7f1be94e103aeea28e969a9cae8f6de76ed3497219d12"
+    },
+    {
+      "path": "priperi/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml",
+      "sha256": "2fdc933a6772da38b03beaaa32a4e6be34eebdd70e9d4bd19ba5f13eb2383fad"
+    },
+    {
+      "path": "priperi/app/src/main/res/raw/bip39_english.txt",
+      "sha256": "2f5eed53a4727b4bf8880d8f3f199efc90e58503646d9ff8eff3a2ed3b24dbda"
+    },
+    {
+      "path": "priperi/app/src/main/res/values-night/colors.xml",
+      "sha256": "a6365134f81a6a55e652717757f63332495c168ae20793eea72d8406f2164095"
+    },
+    {
+      "path": "priperi/app/src/main/res/values-night/styles.xml",
+      "sha256": "8653f8212943f14e04faabc164a5e0f267ef1766ea73205d6c678be979a94c43"
+    },
+    {
+      "path": "priperi/app/src/main/res/values/colors.xml",
+      "sha256": "fc33f5028da4a575d73822e593ec423350309a463aa40da5ee3b28f4af640d0c"
+    },
+    {
+      "path": "priperi/app/src/main/res/values/nfc.xml",
+      "sha256": "3719f95d942fd49236ea584b49ee81f0daa7279172149245aa51db8bb7509075"
+    },
+    {
+      "path": "priperi/app/src/main/res/values/secrets.xml",
+      "sha256": "6b816b00b63b9ac50f677240e7730a09fed404058c7d09e9bac469bd228bc783"
+    },
+    {
+      "path": "priperi/app/src/main/res/values/strings.xml",
+      "sha256": "b90a12fdc11e67f9935fa880ed2ad701c4c0b96fb58e495726097a5eeb03ca64"
+    },
+    {
+      "path": "priperi/app/src/main/res/values/styles.xml",
+      "sha256": "d852040a4e4d9178aab381351b56d118208f626eb478414e3ada226a72e7c6c3"
+    },
+    {
+      "path": "priperi/app/src/main/res/xml/backup_rules.xml",
+      "sha256": "a5c5d03527ce5b633f55f3555f7ea3ba1325ec53d6bae6f51119ae4aba2fa635"
+    },
+    {
+      "path": "priperi/app/src/main/res/xml/data_extraction_rules.xml",
+      "sha256": "862a43616d5d4437fdec61349d5945aa392369e8471403cf961cf1c7ebeb8aca"
+    },
+    {
+      "path": "priperi/app/src/main/res/xml/network_security_config.xml",
+      "sha256": "12c5ef810c159e709efd542129c2439100343e1e176502749d2bf3c1d929010b"
+    },
+    {
+      "path": "priperi/app/src/main/res/xml/nfc_contact_service.xml",
+      "sha256": "eb585542cc6208a4670d1ff1de9ff381136e76b98742eaccc037e501bde5a5ef"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/BackupCodecTest.java",
+      "sha256": "76062cf957b50adc29fdacb59b37c67a3a3188a5ffdaf14f7d0c193addf389cf"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/ContactAllowanceTest.java",
+      "sha256": "4ee7108965277df6d5352b8113074cbdd23bfc8b088e973160580f0dba25a239"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/ContactCodeTest.java",
+      "sha256": "164f36746cf3423e9746da4c1cd58963635259ac4e6ac300f4ba77b0f540fc87"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/DeviceSecurityTest.java",
+      "sha256": "f8468948a75c2b0075d00f618a2b8a3d0fe3348244dc6091ccce1f9812b06e95"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/JsonBoundsTest.java",
+      "sha256": "4934d24476968d80bb30eb9e6f12e866ae75fe976f6888e62ad23667f90c9f8f"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/MessageContentTest.java",
+      "sha256": "8d3a5d2b6edf01c8989a4831094f1a7f268aa975528f9578b4d75378c58ebf18"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/MessageLinksTest.java",
+      "sha256": "d638e4029e5b24f2120383e158425ef02f05bd0ec6d474224a40733435a30c4f"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/NfcProtocolTest.java",
+      "sha256": "df3381edbd39a69f4117530903b6d86a8048cc6016b13f60c0bcc5a685319373"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/NfcShareLeaseTest.java",
+      "sha256": "17ab77dfdb7fd76d1c6497fac4f7026a7e6284547202e723119fd789f4aec8a9"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/RecordCodecTest.java",
+      "sha256": "73a847e3d85a70e65dacc2bbf2429a0cc100592be2c6ccf3a5423bff67e5e352"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/RecoveryBundleTest.java",
+      "sha256": "54c06e021a797e0a8e7bf3686bd3a0e91c36b0168508db06657f817c64b081ee"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/RecoveryCipherTest.java",
+      "sha256": "063c5d38527541f831a612321c1e43963b9793eafcba836be8f7267a860fa953"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/SyncBudgetTest.java",
+      "sha256": "94ff72c618b625ccf7cc4c2ed7f5b7ce944e1d563f4feee37c6f46b77e48ab0f"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/SyncPaceTest.java",
+      "sha256": "cf6c61e8fc850514974f77774f9626edd7612a55bc2d1bd5820e3561033f5297"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/TransferFormatsTest.java",
+      "sha256": "ff98dbb6beeffc10284e18d796332241de18121799c36da26dd9f3ee273f0588"
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/ValidationTest.java",
+      "sha256": "d641bf941d198916483784fb57aafb811e97a78d8d65608856fddd0b9227b054"
+    },
+    {
+      "path": "priperi/build.gradle",
+      "sha256": "6e94fd7d3deb45d681a1a2c33d78e47bfcabcfcfbbebc9edc156791d292006d9"
+    },
+    {
+      "path": "priperi/gradle.properties",
+      "sha256": "a7942215e029f53ce645f57a39b6624ebf72c207132f56be8a8f3f3edbc74eaf"
+    },
+    {
+      "path": "priperi/gradle/wrapper/gradle-wrapper.jar",
+      "sha256": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+    },
+    {
+      "path": "priperi/gradle/wrapper/gradle-wrapper.properties",
+      "sha256": "b05fd036cd3ac6b1e9a065ed55a0253790d0b00f72c2da2cc25cced52e4cb1d5"
+    },
+    {
+      "path": "priperi/gradlew",
+      "sha256": "734b3879d3501dce471cf0522d3bcbafe76873d9fc5129345b67fb43bd15e933"
+    },
+    {
+      "path": "priperi/gradlew.bat",
+      "sha256": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f"
+    },
+    {
+      "path": "priperi/settings.gradle",
+      "sha256": "9317c57f4785af3622f913f9d5acc710ba0ca165cfd73dda3957c31d3229f93c"
+    },
+    {
+      "path": "tools/android-test-batches.json",
+      "sha256": "eef0b2dec619ae7a8fd1f1ee785037fe85c998dd9b411d4795cbea52e60c846d"
+    },
+    {
+      "path": "tools/check-github-export.py",
+      "sha256": "37b9ce935a0d2e206e9473048f639857a15820df79f6abb4bfcf901ee6f6007c"
+    },
+    {
+      "path": "tools/github-content/BUILD.md",
+      "sha256": "23c6756a7bd8bbd93c886de79a4063a71ab2cda3eef656bac8dc0418e1749fa0"
+    },
+    {
+      "path": "tools/github-content/CLOUD-SETUP.md",
+      "sha256": "cd6e5adf6f2793d17da2302aa3a987ac4aa06c2517df8459f6cbfc2e7dfa0c07"
+    },
+    {
+      "path": "tools/github-content/CONFIGURATION.md",
+      "sha256": "fa16c23db51df46b3de65d4bbae64e85dd409cab87d7699e76dc0094b6788e2b"
+    },
+    {
+      "path": "tools/github-content/EXPORT-VERIFICATION.md",
+      "sha256": "7fac675cc3796e0f22df0fe637c713305f35ddf1445cc61a69d9a553a730dca0"
+    },
+    {
+      "path": "tools/github-content/EXPORT.md",
+      "sha256": "be661edaf14fb594622d91120d6c11cb0385d2b4f9f2429b21bf6ed69146a98f"
+    },
+    {
+      "path": "tools/github-content/GITHUB.md",
+      "sha256": "61d9a60b2fb589f7374bf71c605536de0c154720dcb5460201db611d4567cf7b"
+    },
+    {
+      "path": "tools/github-content/PIPELINE.md",
+      "sha256": "7c5d0b8eceb9691663b08e2859c66d290e749bf56db8b3c7f54c9bb48284def0"
+    },
+    {
+      "path": "tools/github-content/README.md",
+      "sha256": "e221dd83e0c0536567f9c7edf4a75b6484da7073d1390e284c0d4b2131c19b92"
+    },
+    {
+      "path": "tools/github-content/SECURITY-OVERVIEW.md",
+      "sha256": "981452c76fdf1142fa347cba5c5e76c220c25dee6db70e01475260cec9a88ddb"
+    },
+    {
+      "path": "tools/github-content/TESTING.md",
+      "sha256": "06afb5162b9a67c47211b468f0392c88bfeec672d29cbcf11646ea1bfdfcd468"
+    },
+    {
+      "path": "tools/prepare-github.py",
+      "sha256": "c9deac0ad2e510d6cc617ec30d2e0758afe8b8d389db46cfaef8ee211239619c"
+    },
+    {
+      "path": "tools/run-android-regressions.py",
+      "sha256": "638ac9157935af1c426d7bbe6b82b194fb3648b25f305c045d3165b113f07457"
+    }
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "d4bd3a1c51587e6b084bc81b1aabbb12d48bb6f9f77a0ca40bae7525a56fb11e",
+      "guide": "docs/files/.gitignore.md",
+      "guideSha256": "b4a0e7817ef6700981327dc0f43845aa82a7b9c31d0f7520ad408c66aecb3adf",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "e221dd83e0c0536567f9c7edf4a75b6484da7073d1390e284c0d4b2131c19b92",
+      "guide": "docs/files/README.md.md",
+      "guideSha256": "0946e52444b16a8801bd3c5b08b494b5e0434b0c34e62d59d71c4b04f385b433",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "backend/deployment/APPROVAL-2.12.1.md",
+      "sha256": "01442a1b4269a0fc8e9e3eade11595ea336972369d84ae82e9a6b8c241dc22e9",
+      "guide": "docs/files/backend/deployment/APPROVAL-2.12.1.md.md",
+      "guideSha256": "c96b23701e52f19f7615236d8bc141c44c51d3e2a9ee70ac88d270111a3e54e7",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "backend/deployment/RECOVERY-2.12.md",
+      "sha256": "15c4a07efce5c95edcb74e1e47e3d58b0e5632a54e87ccbcc639858383e03b5b",
+      "guide": "docs/files/backend/deployment/RECOVERY-2.12.md.md",
+      "guideSha256": "1ecb99823e70a15ebbdb5fc952b3070adb850321aed071490ac869fd4ef8f97b",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "backend/deployment/SIGNUP-2.15.0.md",
+      "sha256": "f7bebcfbd79fa2b78324785ae842e43b4bb80a4b44b4938a8a3f8c4762111203",
+      "guide": "docs/files/backend/deployment/SIGNUP-2.15.0.md.md",
+      "guideSha256": "c58cda6a51251827efb77b7973845b99c441704e6a4fd679643f24938bb8864e",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "backend/deployment/fcm-sender-role.yaml",
+      "sha256": "f016a0fec87dc7f9da0965064c0745d28f967ecf906b55eeb64489850ffa0537",
+      "guide": "docs/files/backend/deployment/fcm-sender-role.yaml.md",
+      "guideSha256": "139b91930c4392c514791c9f1a663873473adb64fd69fe1a00bb14de227e6c17",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/.firebaserc",
+      "sha256": "cfaecc6f1ccac4151bbf3ddadde8eebd718b0ff18db7989096fe7267e6198eb5",
+      "guide": "docs/files/backend/deployment/firebase-lockdown/.firebaserc.md",
+      "guideSha256": "e24402c09251a3ab9b4ae12060bc2f133eae7d677385301b0e869e6800bed23f",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/README.md",
+      "sha256": "9593e8d453692987ac653478ee4a5cbc3caa46d28a1aab6aececb76abd2e2fa3",
+      "guide": "docs/files/backend/deployment/firebase-lockdown/README.md.md",
+      "guideSha256": "597fb679c5224c43d3c198748708bde337e055d12254daf21dbbef639e93e4d9",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/database.rules.json",
+      "sha256": "c5fdf198274a3577d64e8bc635829294d6bac922808bea6f6e06f7d91871a443",
+      "guide": "docs/files/backend/deployment/firebase-lockdown/database.rules.json.md",
+      "guideSha256": "9ca6590976d89f2af0141a0ef1d8d8d5fe3cd4e98a526922de463571950bbf0d",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/firebase.json",
+      "sha256": "5d46784dc9396de4905621d3cdb0bc8aa243cb4414f4e038050e3a9265adf974",
+      "guide": "docs/files/backend/deployment/firebase-lockdown/firebase.json.md",
+      "guideSha256": "aa5879c994932dab5d76dc12896fb1626aab277fe3ae347f9d4c7d06859bd70f",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/firestore.indexes.json",
+      "sha256": "d90549686d2070599d4b969aff58ee007f2f1789b2dac388aa430d43693ef00a",
+      "guide": "docs/files/backend/deployment/firebase-lockdown/firestore.indexes.json.md",
+      "guideSha256": "f3d5f1d3430ade2c0aaf0ee187a1878ff61e3562ce5d9fb7ce871eee3175d949",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/firestore.rules",
+      "sha256": "dfeef9cf91a71e018eccb4819c599ed914704520187823e75f371add38eb2910",
+      "guide": "docs/files/backend/deployment/firebase-lockdown/firestore.rules.md",
+      "guideSha256": "1dd236cf72effed1e218bc0ab8a5cdbd36d0d1f975c94f0436ac78f2c4988f73",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/deployment/firebase-lockdown/storage.rules",
+      "sha256": "57203fce98b5ccca96e55b5e83ba219a4b78e7f4cf98a4b6de7ad41ca92c3a98",
+      "guide": "docs/files/backend/deployment/firebase-lockdown/storage.rules.md",
+      "guideSha256": "8c93bd205abe1fec66fbff4b22d5f5493132e78b9858351a620276ac02b3a573",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/qa/android-fixture.js",
+      "sha256": "1b5c83cf2c80599715bba9301be780e5948304b6bf8b73fc07b0900a6974711b",
+      "guide": "docs/files/backend/qa/android-fixture.js.md",
+      "guideSha256": "64a852f20d7502b1316a9ecf47cc4817b7206cf033d04fca24f764e7a89071ef",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/qa/catalog-security-readonly.sql",
+      "sha256": "4948830ba88a4a09350b93b4436a338294bd26ef4ee5e051eb7a06b1a0a42d06",
+      "guide": "docs/files/backend/qa/catalog-security-readonly.sql.md",
+      "guideSha256": "905fece284ed025f085d46bf0a768d3643cd8dbf41b5a316696147620fa4d5c9",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/qa/hosted-account-controls.js",
+      "sha256": "78617b922816b8e1b0a2c0203364aacc9022e18b614908ed64c9f78d1d4e4084",
+      "guide": "docs/files/backend/qa/hosted-account-controls.js.md",
+      "guideSha256": "8847b9621cf97519b69192764a817436f701a5d13cd4c38e9059788deebc2343",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "backend/qa/hosted-security-readonly.js",
+      "sha256": "3ced24c450f687779d8999734318239eff425fe13da783fd9086e88c1debaf89",
+      "guide": "docs/files/backend/qa/hosted-security-readonly.js.md",
+      "guideSha256": "c4e61997ddf7014f158047bab5d044a2f652eb2e1f7883040bbd30acf823c68a",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/qa/hosted-sync-latency.js",
+      "sha256": "78d7cc389b897139345a3df3b77555a0f753a8b668ed7ce4e7a3b604d9f751e7",
+      "guide": "docs/files/backend/qa/hosted-sync-latency.js.md",
+      "guideSha256": "71ace8b38e7c0d815d9e9fb82c13b6e4e6ca973027f38381652757cbdf3b7d30",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "backend/qa/push-lifecycle-trigger.js",
+      "sha256": "980a941f5d39dcbc7bc07b86cc70ab4336e5b1d1e035fd9ee07c76a1f5dd26c4",
+      "guide": "docs/files/backend/qa/push-lifecycle-trigger.js.md",
+      "guideSha256": "d80b1dab7234e4bf222a34a83412276902feac8ab1deacb36f2b4b692b7f6098",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "backend/supabase/config.toml",
+      "sha256": "a72b3b42b1317900ca23d49c61cbbb90770cea9f00bd24d2db13c49d1acf8028",
+      "guide": "docs/files/backend/supabase/config.toml.md",
+      "guideSha256": "7fbc3a44cd0f253e3ad3c340af03d4cd8d26aec8641bb76900a1def1ba5f811f",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/deno.json",
+      "sha256": "462431f4a14615ab921cac162cb6b181c5f268c5fa9426e1fcc6b43affe6937d",
+      "guide": "docs/files/backend/supabase/deno.json.md",
+      "guideSha256": "b5c8837ce1ff55ffe3b67be46cec36743d262978c198719d8b95fdeba0aae09b",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/deno.lock",
+      "sha256": "e45b29cc87560a352a8240cc09350751c6abfdfcbe6bf47994eaeedb3b3909e3",
+      "guide": "docs/files/backend/supabase/deno.lock.md",
+      "guideSha256": "2282198acc8daf317ea5eeb790574fd17fc4ff6898aad36618e9ca15b07dab0e",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/functions/relay/account.js",
+      "sha256": "b5dde4843d9ad2c46f8ee04d423e8611ff2b38cb59fac8798bdb86293e412900",
+      "guide": "docs/files/backend/supabase/functions/relay/account.js.md",
+      "guideSha256": "2bb10e4613942c135a3eccd2fb9632d5f7921e4731e06555b841493fd6ed454a",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/functions/relay/delegation.js",
+      "sha256": "5813602b333c689780031ef1c6f743a9bfc28c104e0377ee55f63f90976f53ed",
+      "guide": "docs/files/backend/supabase/functions/relay/delegation.js.md",
+      "guideSha256": "18f76be1c664fa11346c9bb20ccf23c402f4fca0cbfe899b6441d926312d2007",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/functions/relay/groups.js",
+      "sha256": "be3f67f4c3ada2fecd90cf383c9240adb9c8c307629589d353ab39274518757b",
+      "guide": "docs/files/backend/supabase/functions/relay/groups.js.md",
+      "guideSha256": "29467ba06cde790520e67c41ed226c6f37bab1139990f0b06739bec20ec7d123",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/functions/relay/handler.js",
+      "sha256": "905d1e3b336ed27922838dc028e347124f7b3ec4fd83d2800842253f2a13d75f",
+      "guide": "docs/files/backend/supabase/functions/relay/handler.js.md",
+      "guideSha256": "09f6a7b37726f4af8cd0a440d553bef7533b9dcd61b157e3a69e24abf083e8b5",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/functions/relay/index.ts",
+      "sha256": "6b46336700872e6a49398849dd882d174a1b4078c973fb32404cc84565348115",
+      "guide": "docs/files/backend/supabase/functions/relay/index.ts.md",
+      "guideSha256": "2bb24f690ac646ffc2a17ccfaca326239a532aa3d862187d15b4cbfb73f7227e",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/functions/relay/policy.js",
+      "sha256": "9076ab66e0e579f420527c2509c7c9718558fbf696e97d891410a4e50de1d374",
+      "guide": "docs/files/backend/supabase/functions/relay/policy.js.md",
+      "guideSha256": "2db098e19bc04b1c4a4fd1e3d94622794d51cdf8d480d18be0297af99da0ca61",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/functions/relay/push.js",
+      "sha256": "dfda0df8be13d0b9fc8054e69bae499f33babebf5121e4a8d6ca0778113e5783",
+      "guide": "docs/files/backend/supabase/functions/relay/push.js.md",
+      "guideSha256": "a3f3d95da3eed7018afc9ff90ec4bb4e2bb53ee1c21208c78dbd6a77cebc7bfd",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/functions/relay/recovery.js",
+      "sha256": "2b1e4b8b5a98464a74d1ccbab6d0d8a59382c660cd9608ede18bcec4539577e7",
+      "guide": "docs/files/backend/supabase/functions/relay/recovery.js.md",
+      "guideSha256": "4a41bee75f6e5ede574cb1c37e8f4587d1f7d09a8fde7fb98b77d7ceb8679767",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/functions/relay/runtime.d.ts",
+      "sha256": "c54c6cac185d2678ac509dfecf14f4f8612c6a1f624a43c0efe79ce4cf22d6c1",
+      "guide": "docs/files/backend/supabase/functions/relay/runtime.d.ts.md",
+      "guideSha256": "ea1f381b05dfb9aab634e2585a2ae7bf21256d5d4e15cb4895624d34d2088590",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/functions/relay/signup.js",
+      "sha256": "fe057a2773078660e09dbe4597301b35ef872354be18e00afe87d48ee24ca7ee",
+      "guide": "docs/files/backend/supabase/functions/relay/signup.js.md",
+      "guideSha256": "d8e45964b5a37df055da77ad1fe824eb46930022baa9d8c1c67e8e9aeb543047",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610260001_relay.sql",
+      "sha256": "3d4c431a560d0cb245c4f0d667f1a6c44b1c75106ea58d3a6639bf235268aba1",
+      "guide": "docs/files/backend/supabase/migrations/202610260001_relay.sql.md",
+      "guideSha256": "9b1c3a7eee3fbcab9a0ea3067039da72630fb8108ad4407600c4a6a491f7ba06",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610260002_expiry.sql",
+      "sha256": "3d10f152302fcc1fd8d1f5ffcd9524342a986c4c6af4c1c3f651edea2f77c0f4",
+      "guide": "docs/files/backend/supabase/migrations/202610260002_expiry.sql.md",
+      "guideSha256": "f208aff4d92d3708d01192344980e121a0ba7da1d6e1fdf3e13488fd65aebc0d",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610260003_retry_upgrade.sql",
+      "sha256": "a4eb05d55f3ce410cc8c9f44776a96bda0e80fe3ebb2a6f74b9a673830cc8149",
+      "guide": "docs/files/backend/supabase/migrations/202610260003_retry_upgrade.sql.md",
+      "guideSha256": "afdec505d0c8886d90ed8b3f1e7f930d65f2e69afb856c4b6e939d5bfd1b7bce",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610260004_device_access.sql",
+      "sha256": "3527affdf00386c759cc113413905046250aa67f58f65ef529570f20d7626667",
+      "guide": "docs/files/backend/supabase/migrations/202610260004_device_access.sql.md",
+      "guideSha256": "f3270eab3cc1a0b9e732cb758b5651408ef2bcbc7a2c39a965e1eb062bd0ba3e",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610270005_contact_approval.sql",
+      "sha256": "bf1e9a937025378ba130071f618b648f70fdafd2a9d2411bc2a70362361bee12",
+      "guide": "docs/files/backend/supabase/migrations/202610270005_contact_approval.sql.md",
+      "guideSha256": "eee03c0b560eef47bad07ad040c735d48f6ac20631372383e041d6b550f482e8",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610270006_contact_names.sql",
+      "sha256": "a066979fac95eedfb5e410a04bbcf6ab8c152c8334c91804c972c672edd49a8b",
+      "guide": "docs/files/backend/supabase/migrations/202610270006_contact_names.sql.md",
+      "guideSha256": "e66f364f84fb565e400cb1eb35284f4589acb281b4ead82f675020e7fff94fa4",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610270007_groups.sql",
+      "sha256": "579fe7d65e675d9f2a31391650d3fd1569607cf85a5c0acced72d310e13afe34",
+      "guide": "docs/files/backend/supabase/migrations/202610270007_groups.sql.md",
+      "guideSha256": "62f7be472f8f43a91c16895bca00aac815e2e75120995d02593ca1a4367f9b8b",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610270008_group_cache.sql",
+      "sha256": "32c6a5ee5ca08a1789720fce163cb2b1ba0db053c5027230c0d831cfbb8c503f",
+      "guide": "docs/files/backend/supabase/migrations/202610270008_group_cache.sql.md",
+      "guideSha256": "814ed6c5f4510535d609ee87354ed04f28a2ebc531db74f508d1d28285497384",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610270009_group_storage_caps.sql",
+      "sha256": "6dbd5f07724a7830f6366905e5292eff955a240f3a56da6eb7a593575a82830d",
+      "guide": "docs/files/backend/supabase/migrations/202610270009_group_storage_caps.sql.md",
+      "guideSha256": "f4099d28dbf0c34e3e79b2bd50fa1219305b2b0a62e14e942b8c633535a497b4",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610270010_security_hardening.sql",
+      "sha256": "434649c888ecf28c09f17caa5aa4deac284fdfd5fe62f0dca3ebc411d5219446",
+      "guide": "docs/files/backend/supabase/migrations/202610270010_security_hardening.sql.md",
+      "guideSha256": "3fb9946e5ac49b81407cdf3a84afdc3c7e4bf150938878acb548dd909683f889",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610270011_account_controls.sql",
+      "sha256": "bc9bbcc2b93df0431300f84e59ee0252acf5b2bd59541414d02debbd9d0b734a",
+      "guide": "docs/files/backend/supabase/migrations/202610270011_account_controls.sql.md",
+      "guideSha256": "0f974d72d847cae0f5c026f58ddb5cc7876bd9e5639970fc4011e0e2b8412db1",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610280012_transfer_cleanup.sql",
+      "sha256": "54b5743171a8ecd65dd0eedf62a9c2c160cf2ec07bb78145e6497500d740b511",
+      "guide": "docs/files/backend/supabase/migrations/202610280012_transfer_cleanup.sql.md",
+      "guideSha256": "2fb5ea4525e5eeba3073e6499f62aae4767b9d77360d674968eaca2a9cefd68b",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610280013_sync_latency.sql",
+      "sha256": "ff8b56382d9850d681653b628596ed9a6e42c21086eadd991a8f261b3803855b",
+      "guide": "docs/files/backend/supabase/migrations/202610280013_sync_latency.sql.md",
+      "guideSha256": "be805735f4dd3a4a8a953ab58932da1961a107b4a1b304d5339d2be6b45a4f2c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610280014_reinstall_replacement.sql",
+      "sha256": "4ae75d8e16dd61fffea19d9a5b8a4df12a193df9ceeba36e5e6c34c123ff9b57",
+      "guide": "docs/files/backend/supabase/migrations/202610280014_reinstall_replacement.sql.md",
+      "guideSha256": "4585c865f070f7c454e0e408f9585b095adbd51935f47b4359ae50f0e115e51b",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610280015_recovery_kits.sql",
+      "sha256": "6b9ec591cac05e91a528832460824217d9dfaa65b11eb1cfca28d41e9fe4dae5",
+      "guide": "docs/files/backend/supabase/migrations/202610280015_recovery_kits.sql.md",
+      "guideSha256": "aff530e4e95ca9f0d3d05959f94644493fe220d760d1688318d04228399f4e57",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610280016_conversation_approval.sql",
+      "sha256": "04f8c4a665deda1d957562ba03643dfa7947996612b45c4a2f85db51e9654824",
+      "guide": "docs/files/backend/supabase/migrations/202610280016_conversation_approval.sql.md",
+      "guideSha256": "323225e4a36756945a503dcada6f315b03ee9539a00ba22a9ff5eb528316eace",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/migrations/202610300017_signup_admission.sql",
+      "sha256": "5c51df0dd8ae5695b3aaf839304756859cf3e11393177d7ee1d255bf143582a1",
+      "guide": "docs/files/backend/supabase/migrations/202610300017_signup_admission.sql.md",
+      "guideSha256": "d1c4be948d0609d846cf83745d977aed5717cc0626a93767a112fa83680941d1",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/package-lock.json",
+      "sha256": "f9745474d7566f4c895f2075ffd77d55f5dda009439a7ba018ae2fe9e77b3f85",
+      "guide": "docs/files/backend/supabase/package-lock.json.md",
+      "guideSha256": "b68b3819ca069ddb4a8e2f44eb7b57c741eb73652d65617068a311d25953e9cb",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/package.json",
+      "sha256": "e148c99457e9ad1eb2bf235c5a62fc7c6573bcd910a19f0a895006faf55dc748",
+      "guide": "docs/files/backend/supabase/package.json.md",
+      "guideSha256": "7a60868505117f9e317048dbb5bd0de07839f6bc463d031f44eb40b10f2b3123",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/test/android-server.js",
+      "sha256": "3ac0c8289a82d6297383d414d9614f60f9cb75a05ea29b0d8af569ee8bfd9980",
+      "guide": "docs/files/backend/supabase/test/android-server.js.md",
+      "guideSha256": "81d1bfea2d7cf143ad6a39bf1f0118cbe3fb53cb335e6d81ef73dbb14d53a023",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/test/database.js",
+      "sha256": "0947b11a27780fa2fda066bb7f3b2fa4aa05723ebfdadb30b14a45bc4be9c8a5",
+      "guide": "docs/files/backend/supabase/test/database.js.md",
+      "guideSha256": "c4145e3e21b053b6d09c1b8c4a2d95fcdb63ffd329d038732142481a74e248f3",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/test/deno-runtime.test.ts",
+      "sha256": "43b6704f2b0491ff5ac3523582a4649bfda2410327421e4e6bdc902ba1de0280",
+      "guide": "docs/files/backend/supabase/test/deno-runtime.test.ts.md",
+      "guideSha256": "3e69425161530e638b38fffb5f9aa3ae5a46e4a8c0bf097ff55288456e8c50ef",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/test/endpoint-audit.test.js",
+      "sha256": "9e5fef6b336aaa2f660638bdca895895b53d94787de6b209ac348865f8bf9289",
+      "guide": "docs/files/backend/supabase/test/endpoint-audit.test.js.md",
+      "guideSha256": "5713445351c13da94e507cd02bd5d4c750fc3cdc773cebcd087693e8eddfda6b",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/test/jwt.test.js",
+      "sha256": "b81d857eee80665512ec8874271dcb0d93c3711ba707261c15eba4d365289036",
+      "guide": "docs/files/backend/supabase/test/jwt.test.js.md",
+      "guideSha256": "b8f29f86c25dace78465acb9b0e2efe4de5b8f3391d15cadf8951e63dc1053a2",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/test/policy.test.js",
+      "sha256": "ac1a27e4fbe7ee07c057ea8ea2581ffefa0816afc385d2991521f4d2b52022e9",
+      "guide": "docs/files/backend/supabase/test/policy.test.js.md",
+      "guideSha256": "2673aa7ef1fa062bd16d75ea55b88ebde3ffd37a2faaf93c56c245fd8def71bf",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/test/recovery.test.js",
+      "sha256": "f4514889906bce765ca32a0eda4f9bcffacf1b1c69ee7eed1cd8f3b0a3db9341",
+      "guide": "docs/files/backend/supabase/test/recovery.test.js.md",
+      "guideSha256": "4152b37081663f47f8e2ca46e318ac65edc5a01a7c073ab0189fe4526d44a4a0",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/test/security.test.js",
+      "sha256": "3c88932ece468e1c90340826916ee2a53e24fb211b483f07145e95f982b2f4b8",
+      "guide": "docs/files/backend/supabase/test/security.test.js.md",
+      "guideSha256": "3d7bef73744b704754dcc453a5c237acc93433fb797c43b00b89f539de5ce7fd",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "backend/supabase/test/signup-protection.test.js",
+      "sha256": "8a11d7c66753deafce242eef1d8189334114e9f9dff58fd01cd8f14551662c57",
+      "guide": "docs/files/backend/supabase/test/signup-protection.test.js.md",
+      "guideSha256": "61f6c852fbee493ada13384c764a02f08f6d147fdf1260cfc10c5e67a3118076",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "config/README.md",
+      "sha256": "b28d1b0c40a23e1a2078fa4dfcc7c12407b25e702fe0d500a3ba7c88cbe78b61",
+      "guide": "docs/files/config/README.md.md",
+      "guideSha256": "95367ca2dd7546fb71a89cae022b61c21f78a949d538a83b517e0d4d5a59c867",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "config/fcm-service-account.json.example",
+      "sha256": "d3f2a5d416bc6b6d468b88aeb08fd9d8aca888323f14f70ddc731bd9c1ace26e",
+      "guide": "docs/files/config/fcm-service-account.json.example.md",
+      "guideSha256": "156370e526f5366cb2c4aa7bac729a5004f79482be9188e796c25d70a5c1639b",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "config/hosted-qa.env.example",
+      "sha256": "f5e50efd4c4df3f6cabe3fd62dd1e3c4d40c8f466ad717b58699e22b303db962",
+      "guide": "docs/files/config/hosted-qa.env.example.md",
+      "guideSha256": "3977ad6d2482232c23caa4f7a0208e4200f824cc5e414f3f76135aff11a95f48",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "config/local.properties.example",
+      "sha256": "b92b2cdc5a42406008dcfa1e0f29b96a6c2e17ecfa75d74595d40cd245642eae",
+      "guide": "docs/files/config/local.properties.example.md",
+      "guideSha256": "a617b1ad453ab1a651b40802eafa5b9d9fa1254af2dbb7daee6ec7c1fc8fe7c3",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "config/relay.env.example",
+      "sha256": "3ca3eee3c0cc1c6b6e74da9a73a13fd273d3501143b996ae7d43317e90c32a4c",
+      "guide": "docs/files/config/relay.env.example.md",
+      "guideSha256": "f29bda1813d49d22e9d8d640f7cfaf2c799f0abee2a4c7521ad0bd488e282022",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/BUILD.md",
+      "sha256": "23c6756a7bd8bbd93c886de79a4063a71ab2cda3eef656bac8dc0418e1749fa0",
+      "guide": "docs/files/docs/BUILD.md.md",
+      "guideSha256": "9c8086766203bfe8d03f8b8c3914e40d4b6a4ce60bdcd5d605f0c237e52ab3ce",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/CLOUD-SETUP.md",
+      "sha256": "cd6e5adf6f2793d17da2302aa3a987ac4aa06c2517df8459f6cbfc2e7dfa0c07",
+      "guide": "docs/files/docs/CLOUD-SETUP.md.md",
+      "guideSha256": "4456bc61b8e7b199ea575b9284670ce9fc73b52a29b4841cab5a8ae923fd8f90",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/CONFIGURATION.md",
+      "sha256": "fa16c23db51df46b3de65d4bbae64e85dd409cab87d7699e76dc0094b6788e2b",
+      "guide": "docs/files/docs/CONFIGURATION.md.md",
+      "guideSha256": "d2f84732f93b400223907724852e70eb98b30e6949d499e03c7f5bf090dcf274",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "sha256": "cf4e60debcf4112288681ff5f6c453afcff8b95668cbfefd0bd256c8a5b21ab5",
+      "guide": "docs/files/docs/DEPLOYMENT.md.md",
+      "guideSha256": "04032e499dc004b8ff712b44143d7cec9f8c2f8163e5be68ec818d8dd167d69e",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/EXPORT-VERIFICATION.md",
+      "sha256": "7fac675cc3796e0f22df0fe637c713305f35ddf1445cc61a69d9a553a730dca0",
+      "guide": "docs/files/docs/EXPORT-VERIFICATION.md.md",
+      "guideSha256": "94b0454f585870e04100c1c05c00a33cce860253a09bcee10f60f12b71ec0589",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/EXPORT.md",
+      "sha256": "be661edaf14fb594622d91120d6c11cb0385d2b4f9f2429b21bf6ed69146a98f",
+      "guide": "docs/files/docs/EXPORT.md.md",
+      "guideSha256": "91e7d91e60afe22872b52afbdc60c0dac226c5902591ee5fad80e1702ee5fb95",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/GITHUB.md",
+      "sha256": "61d9a60b2fb589f7374bf71c605536de0c154720dcb5460201db611d4567cf7b",
+      "guide": "docs/files/docs/GITHUB.md.md",
+      "guideSha256": "31b483d9b877f1e8255584926e36db57aa0b4aba582dc56a63067d564ea441c7",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/PIPELINE.md",
+      "sha256": "7c5d0b8eceb9691663b08e2859c66d290e749bf56db8b3c7f54c9bb48284def0",
+      "guide": "docs/files/docs/PIPELINE.md.md",
+      "guideSha256": "0fd55d4772f2ad616a2d042379feb0214d87fc6d0c029a0a4b1d7783ed44b668",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/RELEASE-REVIEW.md",
+      "sha256": "034e5efb3c70cd20441224fca73bf0d3747af389fa09513b48d091ecb09b3caa",
+      "guide": "docs/files/docs/RELEASE-REVIEW.md.md",
+      "guideSha256": "da70f0b057650a13c3df3a02a19058a2f602eee406794c0d7af3bc258982be3b",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/SECURITY-AUDIT.md",
+      "sha256": "6bf9d2f20429bd90aeeb322cf5145a9a3a5c12fb3ec33929127193d8cc6bfd90",
+      "guide": "docs/files/docs/SECURITY-AUDIT.md.md",
+      "guideSha256": "c6cff6f55d943a47153869f5fbe3deeb5661c62b1b5bda0effa7fd647671940a",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "docs/SECURITY-OVERVIEW.md",
+      "sha256": "981452c76fdf1142fa347cba5c5e76c220c25dee6db70e01475260cec9a88ddb",
+      "guide": "docs/files/docs/SECURITY-OVERVIEW.md.md",
+      "guideSha256": "38f5fe148919657aeef191ec9e207fc0005f295a5b90026589f93317b13440ce",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/SECURITY-REVIEW.md",
+      "sha256": "99c7fe07d3291abd082ae910f8726f68a5b3d3a51d61c39a4fe874df96d9ae9b",
+      "guide": "docs/files/docs/SECURITY-REVIEW.md.md",
+      "guideSha256": "1266d30e70963c67772343d8c9204baa283a987fb613cebaea3d692c93f8fefa",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/SECURITY.md",
+      "sha256": "8113b278b0736c812c9724156c6d6f198c2779a56211178d7b017fb29cdfbe51",
+      "guide": "docs/files/docs/SECURITY.md.md",
+      "guideSha256": "5451164989c5c0456f5d0577461adaae751f5993b1191696f6908ef2a12741ab",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/TESTING.md",
+      "sha256": "06afb5162b9a67c47211b468f0392c88bfeec672d29cbcf11646ea1bfdfcd468",
+      "guide": "docs/files/docs/TESTING.md.md",
+      "guideSha256": "6cbb692ab53e5cd8514c9dcf3b05e76bb7cb71a9af51dfe1e7eb059ccf2ab66c",
+      "origin": "export guide/example",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "335e83a548da489f0dd195a65ee52f1628fe3088454e62879b596b20fe774001",
+      "guide": "docs/files/docs/VERIFICATION.md.md",
+      "guideSha256": "a98f6fae8882d5018beb8375aa78a267665cbb5f7b57f3ba2b10de0bf8f9df23",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "features_to_add.md",
+      "sha256": "29b06329129471133711016b881b70b3b5830d909459433c8df3973d936e31d0",
+      "guide": "docs/files/features_to_add.md.md",
+      "guideSha256": "036c30c69e252df559cc13621654a504c4273716720a01dae2d474f7f5287511",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/NOTICE-bip39.txt",
+      "sha256": "c617bbf35b2315390dd1a92104590ad54c090ecc7d0a1b9b8c094988cd19a180",
+      "guide": "docs/files/priperi/NOTICE-bip39.txt.md",
+      "guideSha256": "012ea818fbcb899572f9aa34bcad43fdd87b683acc48e97253195dc5a99d3afc",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/build.gradle",
+      "sha256": "752ba93c5e8e8ab8a6e19c99b62a3471e2433470b28cfb02fc9e201269848e01",
+      "guide": "docs/files/priperi/app/build.gradle.md",
+      "guideSha256": "5d1669d7ba15c938bbc27e1a4ed15ce4a39cbe7a8883bc7ee549dc8827bd2f31",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/proguard-rules.pro",
+      "sha256": "899b674be129743262ed03404b8bae9d85dbde43d21bfe783af00980ffc2887f",
+      "guide": "docs/files/priperi/app/proguard-rules.pro.md",
+      "guideSha256": "1be9e7a2f31029e5f166955ff6f4bd16dbf684b8f1316322666143921b7bd15d",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/AccountControlsFlowTest.java",
+      "sha256": "395e97c29c0317e6cc4bd8bc016c5443a32169f6afdd651ae797c970c03f56ad",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/AccountControlsFlowTest.java.md",
+      "guideSha256": "dad26f50ff5d9ee597c3345c448f1a0ff6f06dd5b070ea9772190762e2f7a0d3",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/AppEntryFlowTest.java",
+      "sha256": "1bad79c400cc63c45552c57d45343d409195e4ec62e036138c7b14003e052497",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/AppEntryFlowTest.java.md",
+      "guideSha256": "a41ef286109ef827763e2bcd3b0c2db1e81d8f7292251b0d5c65d1997bda0910",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/AsyncDeliveryTest.java",
+      "sha256": "8cb78633c1b7620f0eb582428f86acc8e6582e68b66154ea6338468bbbeacff6",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/AsyncDeliveryTest.java.md",
+      "guideSha256": "1fb8cde2a1d90c3328188b1e5a725100ec8f1902bda37148494dd43c59eeb592",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/AutomaticStorageTest.java",
+      "sha256": "968528cdf43dda1b742d6a63e37c251aa55c55ce6b70922e187058a8c21c340d",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/AutomaticStorageTest.java.md",
+      "guideSha256": "6996387e565c5ecd682e5e6b51f9904f2e2613d5381159aded69a35767766f37",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/BackupFlowTest.java",
+      "sha256": "403e7e0747f656262d24727466559d2cc931e1bae6fbd87dd72b4d9cfdba4b64",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/BackupFlowTest.java.md",
+      "guideSha256": "5300fbfaf2c853c585f17112be99d70147db4a518f81da1f26f53d6dfba85fc7",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/BatteryFlowTest.java",
+      "sha256": "e36d77288b6b329c70d9b6f0ad8ff847bfb0e9a636d39e0df8793ad816f934d8",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/BatteryFlowTest.java.md",
+      "guideSha256": "a4a48890b2ff500d31a0512d160238d24e58ff2370d9d7122060bedb395bece0",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ChatPinFlowTest.java",
+      "sha256": "34e089a12b04060b5863c522003672231d7083cc5fc8e1eaac5d42d13d3b7eed",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/ChatPinFlowTest.java.md",
+      "guideSha256": "a625560c867c795bc5a1c87db8ddc5ca101f962ef4f9d4024b3ec75c9c615341",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ContactApprovalTest.java",
+      "sha256": "cde98bebc146167b6f355978cdb1e367033917eab61291078820b0716883fbec",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/ContactApprovalTest.java.md",
+      "guideSha256": "b5f99d70ffd0005dd53f2f7405dce949b546c0f6577236fbca71cfb8d138d7a1",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ContactCodeFlowTest.java",
+      "sha256": "fe749a55cb17f196fef57c0993435a7c5a5908fe31ff341e8643fb5d04285304",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/ContactCodeFlowTest.java.md",
+      "guideSha256": "e45ce0768e8b452bf0655f5e08cd7e4f12c28437991a3d13144f3ad7ff771eb2",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ContactTrustTest.java",
+      "sha256": "c9b639b92de68dadcedeb2c04a950a346e5ed55d713f217ced11bca84e8edd31",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/ContactTrustTest.java.md",
+      "guideSha256": "1bd75cef4c2a19e4c24e3464096ac8eb161fa3d5cf88ec9831b19fb9a144a523",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ConversationAlertsTest.java",
+      "sha256": "15f6b4d46c0c4d29f99e676e81c1c87f5313fc902a721558e7479758ad7d2353",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/ConversationAlertsTest.java.md",
+      "guideSha256": "a15573ee5144183309d4ee64601d7d1859b9cd89d57444cee0052692a5dd6267",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/CryptoStorageTest.java",
+      "sha256": "5d19d2aef73146990feb1d18cb8acc5b29dc9982a9adb5aee10f842b9c3cab02",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/CryptoStorageTest.java.md",
+      "guideSha256": "ec2b8beb02dd985127d2485698d86ef480102855f82378c4a2fac9fefbc05e16",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/DeliveryLatencyTest.java",
+      "sha256": "2ac786820e4c5f5eba9a69d31f0f0d59e46fdef42b6e86baaffd0c2206351a0c",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/DeliveryLatencyTest.java.md",
+      "guideSha256": "68c967a33d6fe5bfb4785f777931563482cd9c7d53e5cd555e36fc8f411a85ca",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/DeviceFlowTest.java",
+      "sha256": "62d6accb38305f6272beb96f10fa0acd8809e5a4c446dacd36569d583b6615c1",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/DeviceFlowTest.java.md",
+      "guideSha256": "1f80ec3ce7258140621bcd348d786a9bacff27f04f73fee48038b08863261131",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/DocumentResultTest.java",
+      "sha256": "f083157e5a7dce444c18d1f4f2d468097db6bb49ffc93eddc9d1da96da71ea7c",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/DocumentResultTest.java.md",
+      "guideSha256": "a7cd53e44b478d40cbd9b3e2c8fa3374703641a3f16384d1dff970d1fb1c340b",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/FeatureTenFlowTest.java",
+      "sha256": "3cb7621e033e22b75b6c91bf817832fd3cd2fb3c9c2c72eb9fd62cb07de2a2bd",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/FeatureTenFlowTest.java.md",
+      "guideSha256": "6ae5a81162267e185f7b0d7df6c7b93a84e4f77851e6b762084f7b8ec15e02bb",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/GroupFlowTest.java",
+      "sha256": "3b4ddec9e54fb79d8923a8ac7a4b6de0476ea5f8d12e9ec745ab82da89431443",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/GroupFlowTest.java.md",
+      "guideSha256": "6d1cc77971cc0bde47db5daeb40c35e51c4b011b7343f96df46486e80ec94ebd",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/LiveContactApprovalTest.java",
+      "sha256": "17c63657f3a2f1a9ea29f3845242c61b5e4aedf466170bd16532e311ba6a067d",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/LiveContactApprovalTest.java.md",
+      "guideSha256": "c0606904e4c72ec775c0bb9a02044bb6d729498ae8eefbc8fb8ca1a93c042287",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/LiveGroupTest.java",
+      "sha256": "eef61217dde1d19dbd96513031addf86ab3d9e014eac501d5650c8f43c5a096e",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/LiveGroupTest.java.md",
+      "guideSha256": "4a9159a706e7fa33c95f2abbe4b2ab133129e0387ce2a6f95c19e64f23864f26",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/LivePushLifecycleTest.java",
+      "sha256": "fe982c22d3fe7e7c854cd67e7c4cd08c440bc197598297ab5c29c482a41eb9f7",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/LivePushLifecycleTest.java.md",
+      "guideSha256": "de92967f17b78bf204799f13793102e3e5865d11c8d24ff833131a0df24a9ca5",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/LivePushTest.java",
+      "sha256": "3e9e7b87e9c0fc410d768cd9e1bcdf428e6fd7ecce5a09090fddd96011f16f6e",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/LivePushTest.java.md",
+      "guideSha256": "fa7d254e0c391117b1be9db2f8bf7032ccb97f9e7c1cbd4742c5d2d116c8c4fc",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/LiveRelayTest.java",
+      "sha256": "98f5e4dab691167bbe6918652b98c9a9487678611e155d35c1eb3e6874764377",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/LiveRelayTest.java.md",
+      "guideSha256": "7791b30718f0838f689f76af890d1d8d453cb516c5206fc7b246d899b84784ac",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/MessageActionsFlowTest.java",
+      "sha256": "106312a398486b095400d726d53d233d62203a99c662e0f1ec1a211d8a8194fd",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/MessageActionsFlowTest.java.md",
+      "guideSha256": "23db3fa486426f557bec0e808021fb3d753443201c0680ada20bb206241224c6",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/NavigationRecoveryTest.java",
+      "sha256": "fbcb0ee400822f2be4cfd357d7ddde387740939c14a6fcfbc859ff4e2ed28c19",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/NavigationRecoveryTest.java.md",
+      "guideSha256": "c691525d8bcd951b33a1c38509525de02a3defb39dfc1c0337c50e804145be62",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/NetworkInputTest.java",
+      "sha256": "be0cb844b424db81c3a216fe8ba8b754103ba021e1b25d49198aea469bd13784",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/NetworkInputTest.java.md",
+      "guideSha256": "d7fcb75a19dbb253c45c0c0ce1b9e72bcac5d34bc7bc01e64387c826dc207326",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/NfcFlowTest.java",
+      "sha256": "c325659e9411728126dd77df6afea2976d23aae5a5ac86fc4f44d72e8f0a822b",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/NfcFlowTest.java.md",
+      "guideSha256": "d5de645167ccea945f385146ac628993e5b2fdc9034689d62b0d0510d7183fe1",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/NotificationRecoveryTest.java",
+      "sha256": "50794486cae83523fa5871bc3c6052f35d753ab00c423cdf131b58cdefe545b3",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/NotificationRecoveryTest.java.md",
+      "guideSha256": "88a6f75cad0daabd115702da50ba632413753d6a30cfb27195e10e77d2e82522",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/PoisonInboxCase.java",
+      "sha256": "82b71896bce3086aacd6a839a43f55b51e499236ccdab6e03c87b98cc0273e42",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/PoisonInboxCase.java.md",
+      "guideSha256": "e417724b2fc077e566c8fb402d58c9097bda12f0f5e4b3b25fd18e62e12683e0",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/RecoveryFlowTest.java",
+      "sha256": "e54435b537ce9021d3fe95ce27cead90f0cecac521c9b2adcd4d4f9e3a8b84ff",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/RecoveryFlowTest.java.md",
+      "guideSha256": "239bbf80b8f91ca5050ba7ed6444d31bac7032ca652610fd72a1246daf4c845b",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ReinstallRecoveryTest.java",
+      "sha256": "2c9fe109a50ada7ff2b0b3212137e4cd4317bdc546c02e69f6c594250bc0756a",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/ReinstallRecoveryTest.java.md",
+      "guideSha256": "430f81bac6db7138a849e35d534e9b0f3f5ec2fcf27ac149da4d48c8e94c0e90",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ReinstallReplacementTest.java",
+      "sha256": "4bf99f010adf3efff2ad96902970c87e614389784aebe75ddc147e8f22eb1df2",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/ReinstallReplacementTest.java.md",
+      "guideSha256": "2c049b764a2ce7680484360bf1e46b96f720d1c5ef76031192b8985c91944af9",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/RelayFlowTest.java",
+      "sha256": "56c4b37667137eaa7ba2a01a3f5465557bc28db20c180bc43bf9409a459f1761",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/RelayFlowTest.java.md",
+      "guideSha256": "3ed311568e10ec7c0d189ea4acb3d4f9138e2a878daa6a575c091c5617758442",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ResilienceFlowTest.java",
+      "sha256": "0dba174a1321c4c944c7996ea7ed9595dedd7948f8d7ac13b0dd45ddb02d60bc",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/ResilienceFlowTest.java.md",
+      "guideSha256": "bd4bb508ee99bd28aa6b9656f610361784210521a400d0f5503c9e864c82c261",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/ScreenLayoutTest.java",
+      "sha256": "44867e9a1f5cc354c6e8ceb8f1c2b5297e152d1701a05944c195fb367c6a4fbe",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/ScreenLayoutTest.java.md",
+      "guideSha256": "e7f3d207c48c159cbc51544b03b32a9c22372d85272a81771b245c87222b05f8",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/SecurityBoundaryTest.java",
+      "sha256": "fdb2135401555512ba78f63b0fd202d57c2d38960be20a9f561dad96f8a6bbc8",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/SecurityBoundaryTest.java.md",
+      "guideSha256": "46396b1b9c38c5194a63bed5fe1d754759059c8943f2c1836d67f4ea2ecbd7b6",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/SignupFlowTest.java",
+      "sha256": "a20fe6f459a40228be724e31fc09bc17b8ca060fdb4e93cfd2f976b238490a9d",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/SignupFlowTest.java.md",
+      "guideSha256": "5837ed60dbcc4605f25c0d678265cbd90a50013901d95b056afe77469b11565c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/StartupPermissionTest.java",
+      "sha256": "4687922d6b74ab4a17b0a09e1d863be39feb282d5a9c8af952089e480739417d",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/StartupPermissionTest.java.md",
+      "guideSha256": "03629efdd35e69cc44fb4a9695ab76e1961c081683b69676cbfdd8e91c2fd126",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/StorageFlowTest.java",
+      "sha256": "cc3bf640b91e63bb6ea5059e4f33c3740dbfb2fd1ace6732680274ac34f9f028",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/StorageFlowTest.java.md",
+      "guideSha256": "01ae68ba49ea0f1b4c587fed8c7d1a9e896d6d6d0121d997906041179c98a36a",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/StrictDevicePolicyTest.java",
+      "sha256": "c99a22524121028ebd2079489c4d0829f9661563c4e0ed3cf9beeea98aafe5a9",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/StrictDevicePolicyTest.java.md",
+      "guideSha256": "8f4046e9dde567fc999adefe6bb1f79bd060efcd5dcc290a2d82f2b175b0da7e",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/SyncIndexTest.java",
+      "sha256": "8fd6bb0da54ce937b53b4a69020e8e330c07da890e2e0967e24f76a6ffc3075f",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/SyncIndexTest.java.md",
+      "guideSha256": "06af6dda2cb0e34dde7ef86338bb0d18e0c68f7460aab83aba83ea6c24fbe155",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/SyncResponsivenessTest.java",
+      "sha256": "0f397d050118b2e77c610cf0e0c3872caf6c0570fe67b4eab1c88655c5b21b4a",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/SyncResponsivenessTest.java.md",
+      "guideSha256": "5cc689cf3c65962deb54de3e682907ee07fd78e7b182f57173f6eae97ac6e8e4",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/TestIdentityTrust.java",
+      "sha256": "d75dd73017f5aabd81bae0966e5daea51d05aa35ae745866bed170d1513c96ff",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/TestIdentityTrust.java.md",
+      "guideSha256": "3f94d02a1615643433f8318168663e71a7ec2de240ee27c08127e5c56bba4e55",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/androidTest/java/com/priperi/UiSmokeTest.java",
+      "sha256": "c220c546dfd976139e820adc86888eb85f185fae56e154c4f622be81f0d43c16",
+      "guide": "docs/files/priperi/app/src/androidTest/java/com/priperi/UiSmokeTest.java.md",
+      "guideSha256": "ff8b01da99cb48e9fc741636dbe6021eba337aeea769452f494a0347e6496633",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/debug/res/xml/network_security_config.xml",
+      "sha256": "0c0d4843ba1d70ebf274aa0d466744e9bba355b92e1f00ab0597703fb1da69e0",
+      "guide": "docs/files/priperi/app/src/debug/res/xml/network_security_config.xml.md",
+      "guideSha256": "6fd7ea50e0e4fb550fcd433bf51e91d0dea92f784002a2003697e6561abd93b3",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/AndroidManifest.xml",
+      "sha256": "200f377d18e818f371f6496fc3cf2aaad63c003c0b40ac191bf63625e51b6cd5",
+      "guide": "docs/files/priperi/app/src/main/AndroidManifest.xml.md",
+      "guideSha256": "c88fb70a69465f8dc4f6f08b4b97df58d3aaac96a88d908987c1c560897526b2",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/assets/NOTICE-bip39.txt",
+      "sha256": "c617bbf35b2315390dd1a92104590ad54c090ecc7d0a1b9b8c094988cd19a180",
+      "guide": "docs/files/priperi/app/src/main/assets/NOTICE-bip39.txt.md",
+      "guideSha256": "46d53a48320c0f7b5ebceba70fbcd04123f9af69920cdfeb517919dcc9910d4f",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/AccountPolicy.java",
+      "sha256": "b1305351574930605e108a2cca0a81116a179d6d0a2beac78a03cfbe31a790f4",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/AccountPolicy.java.md",
+      "guideSha256": "284d5433c0159de6eb25ac488506f9612e3e6dff01ff33e89761fd5f237e6b19",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/AccountRecovery.java",
+      "sha256": "60a639f6229b6adb2361cf3a9ede68a1ca02929a3276b5e6fae4a86b4dc9f556",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/AccountRecovery.java.md",
+      "guideSha256": "9f33c0d5a52cdf50f51eab8470cf95a1cb622de8a8ef6a559388ba12039c8146",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/AccountTransfer.java",
+      "sha256": "f66626ab641ba77af96bbd859203338b278b7c7917f86b465b9497cd3dbccf1a",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/AccountTransfer.java.md",
+      "guideSha256": "dc96e82f4382088fad9b087359f5aaf2a195c1e8a31397e62602ba56cf424938",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/AppNavigation.java",
+      "sha256": "cea6aaccd56c55418117ffbe0a51a7b3e542d1ea839e25328a4fe165ec944e9a",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/AppNavigation.java.md",
+      "guideSha256": "5c761a6119bf64b22a537782f7bd78d0cbb119e1ab53ff281c9fcc96658ab7bc",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/BackupActivity.java",
+      "sha256": "96a3087daf8b8e89544d0a10675d2c359103c209fbfb07b2f59f280017d25ab7",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/BackupActivity.java.md",
+      "guideSha256": "8dc52787f7424007454785b89641ebb7e9b14debae4cd8b78f95f9f35d7d21eb",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/BackupCodec.java",
+      "sha256": "68ea076b85c68dab19ef8f2cb6bd34a8ac8ae2676e7c44d3965dc9e5108583cc",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/BackupCodec.java.md",
+      "guideSha256": "f7d1fd943a9321382c4c5af250c224b5fd5cee89f727b8ab8617c4fd0ee2a21b",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/BackupFiles.java",
+      "sha256": "fed06e80eea1d8b416d8d11ea3b151f24ebc344efaaf72b31bfa0277d6d19ed8",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/BackupFiles.java.md",
+      "guideSha256": "c5edb666eee5051221ce5a579eef08a641160b6a858d2f42cc2b1a1ac3d9e53a",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/BiometricGate.java",
+      "sha256": "5913adead17e83cb5cd4f9340a288d507845ea33ce3414843e110c73a525b2a0",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/BiometricGate.java.md",
+      "guideSha256": "316ef311d2920da5c1d8906e74173aef1844be71449d47ddcb42010bb3564e9e",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ChatActivity.java",
+      "sha256": "27a0f5ca15016497914ddd7abc9672064649f911150d3d40bb58ce265e321d95",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/ChatActivity.java.md",
+      "guideSha256": "805b92ee6390004df038fae12cff2cb012b3fe2c0e0877b903c5fa0056a8bdbc",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ContactAllowance.java",
+      "sha256": "50e7f1cbaad9268aaff5301d064214bf1cc175d3559724ae1bfbc6714d0c35a4",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/ContactAllowance.java.md",
+      "guideSha256": "d3bd0a8fbc4012499e8174a6bae94becddc147861e34ffb3ad1cebb6e07088f3",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ContactCode.java",
+      "sha256": "a2653eb614747eb8e402d8116bc9c614d4343d428304195b3dc5439745e65023",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/ContactCode.java.md",
+      "guideSha256": "9483abc8015babf86db0a98cf6eee4e478ec85a63f5c984ae50ba0498ed92690",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ContactCodeActivity.java",
+      "sha256": "d2e5804263ebac215abfac5acecf5d664c2167e938bc3b27d4682cca21365b51",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/ContactCodeActivity.java.md",
+      "guideSha256": "006cc1a87ec73e450993c31947d22b451dcba77c6e8f3334520fe452b8a20859",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ConversationSurface.java",
+      "sha256": "e01c88b440a30ccfbcfb62105cb5c8ea48c66f6e3985074a7fdb754cd4fa9735",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/ConversationSurface.java.md",
+      "guideSha256": "289b58d670504858c39754976aca98c8380c761f7bdd4de154a34577455b27d8",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Crypto.java",
+      "sha256": "8c91dd4795c6859c5959ad852b1716038e39c5918c9bb2865bfaa79cc27ad4aa",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/Crypto.java.md",
+      "guideSha256": "dcac7b3e4500aa9f5e00a6ded340611a6b6249bee376af9c5659443c2be085ed",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/DeviceIdentity.java",
+      "sha256": "976efbf0d576b8ad2d44c401ac1b5abdf2ba95e61eb3d53a659fab5c43a09bb8",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/DeviceIdentity.java.md",
+      "guideSha256": "48763b8ea491e31286ee51676a820f619d7b9da90e0e5e38f014ee337b29f4a0",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/DeviceSecurity.java",
+      "sha256": "32a7936182bb5fa2b44719233328a8447d48c1612cfe64f83bf51a041fd692f6",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/DeviceSecurity.java.md",
+      "guideSha256": "220f3186f9ca220bb9fb640722a403cf8f8057d200cd29c6d1b8ec281e78eab2",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/DocumentUris.java",
+      "sha256": "13f21d0e222afdb54729f72c208d8be06a263b42558eac7b14627b551e7112c2",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/DocumentUris.java.md",
+      "guideSha256": "add86f0b1bbc5e6a8a729fb60b50b4722361b636f88d8e691e19a43224b65121",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/GroupDetailsActivity.java",
+      "sha256": "9d3bd7ee301253aaf087d528ff9d17e87f0b154f00f5ca68ceda3f5e20d0935f",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/GroupDetailsActivity.java.md",
+      "guideSha256": "45344b4e18edbd28fc35fc8711d5607182c85c70b3a1dfa85b514b8ca33e3bd8",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/GroupRepository.java",
+      "sha256": "471b18f685398285b8fc7bf7d4e39631be8b46a27fb441fc53d3cf7d224bfea6",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/GroupRepository.java.md",
+      "guideSha256": "b50102775e320c4adc43335aa91a15860c0c31b0ddb418c36961b2812f192f89",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/GuardedActivity.java",
+      "sha256": "70a8c8ae3bf32eb9358080af6fe342fbeb9e964d20b8d412d8a48cfc43789508",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/GuardedActivity.java.md",
+      "guideSha256": "a0bd378870dc53a8368a305f86fc904aedcc4796a903e58c7e1360b4f708eef7",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Icons.java",
+      "sha256": "2de96ee6ac5879ef75a47e60249e9e695aaa7b49bc78542c7f4fcfd1dfbe1bab",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/Icons.java.md",
+      "guideSha256": "23baf6936c99400ed0f10aed6d9c89e0056410cf29096bfc90e6a315d7bca9fd",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/InboxActivity.java",
+      "sha256": "03a2190f73170919955df7294d26a78c61628d180360dffceb532959c65aa4df",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/InboxActivity.java.md",
+      "guideSha256": "b10ee53535c8e7c8107fddcdb093ef0d2d7556523494a83da947dae909a33154",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/JsonBounds.java",
+      "sha256": "71c4ce10e87689d7a1b286d7ae433b35074379d36fb27f007c295b278d6a97a9",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/JsonBounds.java.md",
+      "guideSha256": "1408967bcb53688131115fc6199ccf2814ea1e4fa4616277943d63fc7592922c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/KeyDelegation.java",
+      "sha256": "4b7be63de95000de0baec011033efaf3b84e0d7b7bb0da7b3de10d8649cc7f49",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/KeyDelegation.java.md",
+      "guideSha256": "e88acfdd5f5d401b5b0b4f6bbd3fdde4c8a1ce55a24a1e0e8c87b0ee0e86b473",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MainActivity.java",
+      "sha256": "72e813b05fee8ce3e8ca1b09a6c876fa8e14191ce6108d09e8e990ef163c96e9",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/MainActivity.java.md",
+      "guideSha256": "79b067d7c693a35e3bab93ce2d3bafa482b36425974fe50839de2bf4f655f54a",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MemberPicker.java",
+      "sha256": "5b98d3ad8fb6445ab858154def950c3518b8bcdc032612604a0a35b062bf42fb",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/MemberPicker.java.md",
+      "guideSha256": "91a133eed83baa4f439bda859ee866d9afd1d6163f15e82b955f197f4489f2da",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MessageActions.java",
+      "sha256": "4c7059e4ff75bf76793f6b04a7988e6eb5f4a09259717936c922b49dc004c295",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/MessageActions.java.md",
+      "guideSha256": "f37b0865015570cbb5654805907044a4238824fad9f2bd1a0dbc7b62cacafa3a",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MessageContent.java",
+      "sha256": "3b5f9102f513d04ffece346b7e363e50af5db87d7366300c406a370abdb1e926",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/MessageContent.java.md",
+      "guideSha256": "e9cfd6ad3a713fe28dd2dcf71c92960042ad7f9498cdd3ad28be6d4527a9b862",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MessageLinks.java",
+      "sha256": "0c135b40b4e3c34f12200ca279da85c3282c0be71f08e9fac049eccb7367a898",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/MessageLinks.java.md",
+      "guideSha256": "c27c0651268edb3d02b4ecb09c5916cee8cfe4715240c0de207af0e35b3db5ab",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MessageService.java",
+      "sha256": "22967dc4153c2fd80f3918cfa18b418860529021400a152d581e00537e4b1f49",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/MessageService.java.md",
+      "guideSha256": "1b74235bc9fba089c6fa68dd97fffc8b51d76d58de2c0caafb83294aeb7ecfbb",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/MuteControls.java",
+      "sha256": "17a98f17b777f9de1e4e98647054e4d12d4792ddcf5273ca32cb87b8f1fe48af",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/MuteControls.java.md",
+      "guideSha256": "14180b166284722221293ae40c1eefe66ddb89118c086b1371933aacd7738b2f",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/NfcContactPanel.java",
+      "sha256": "f9ca088826efb89747856c143d8d886ecda2b2ca16e192bfe2b2e98841009c73",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/NfcContactPanel.java.md",
+      "guideSha256": "2dc471b399b258e9c3184841ef4a08a917a6ecad255672913575393b7ab5184c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/NfcContactService.java",
+      "sha256": "cc5604494e4e3beb83ab3a3e48fa84e70aaf5ef9540f6a1d1835c9e159af71b3",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/NfcContactService.java.md",
+      "guideSha256": "58fd6ee63c22c9cdb7dd78be79afcef8c2a07b404b4e273bf546f699ff405738",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/NfcProtocol.java",
+      "sha256": "c964b6bb9c667cffbdfa17f1b3ccb5c4e7cff3f17176ba443a94941fab9a11ed",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/NfcProtocol.java.md",
+      "guideSha256": "a40e456edf06d65ae008f2d67ff0545294d65d2d0659f0ae1c6473bfbf93e8ef",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/NfcShareLease.java",
+      "sha256": "a27c56039fd5f58a23de89d2ab6a29e291c6b6ef9b47cf172dc0803d6d8359b4",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/NfcShareLease.java.md",
+      "guideSha256": "1ede4d46d8334b4ae36e9739589a713ec83fbca76cc36ff65a726f0968031e50",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Notices.java",
+      "sha256": "c1e9aefecc6181b23e0c83dd1216aac18e8b91f7c28cb3ceecf4a144cebad8d9",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/Notices.java.md",
+      "guideSha256": "8986ee6950792d57d633e22a51084b25bba0d19c347ee1fd064af2ed204be9fb",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/PriperiApp.java",
+      "sha256": "f2828637318b1151688746aeff18516707b5cc4c9e48b3255574e33d87e6d667",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/PriperiApp.java.md",
+      "guideSha256": "cd53237eab00a87d4751eae0b5c29ceab65c7c7257e82a57e6d6badd1e06f8b3",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/PrivateActivity.java",
+      "sha256": "3bf704dabe86e4382f72f002649bf27806b315d8fe3b8b511b8d1eb4759f9b1e",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/PrivateActivity.java.md",
+      "guideSha256": "48b8d48edd896cc50a2b864afa03b339da2db73cb4052db563b69a447e1fc0b8",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/PushSyncService.java",
+      "sha256": "a229a46727006e7664e2d12274fb0be21df2c5c024ed4366bc3da0cf6f4c2f9a",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/PushSyncService.java.md",
+      "guideSha256": "6d27808b268eecf25466bb987b6c7cccfca10ed725dc93d96ed4598057c30361",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/RecordCodec.java",
+      "sha256": "2e753374bb4c15a6ea88fdb0e2966170fc679f9a2f1074388f189b0ed5d94095",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/RecordCodec.java.md",
+      "guideSha256": "154dc2467ea293a928e897aea488d73032f0cadee99052f52c812a46ae913417",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/RecoveryActivity.java",
+      "sha256": "e92111e70c5bc597aabf86f5a460c9eb72a2144103442328383fa7fa41866ee9",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/RecoveryActivity.java.md",
+      "guideSha256": "04284f1292fe3ef076900878f175889e96ea1bcd645c2d54d9062ebedbef5163",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/RecoveryBundle.java",
+      "sha256": "f029ce448d5aab2df36a5d09087df196cfb5aaba570cae8cfa24b3990354ee3d",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/RecoveryBundle.java.md",
+      "guideSha256": "63f6cc6d3ec9a6057bcfb0e344815b5d0730d105e61a33856531970b8637a5cf",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/RecoveryCipher.java",
+      "sha256": "1a928e1e7399a0e058af62c4ce208df02f3954d0647d6048dd6d7a4e9f5edd6f",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/RecoveryCipher.java.md",
+      "guideSha256": "9a88bd88036e06f4234ce844d88b21ba542611a1b2fef9f18a340a51208d45ea",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/RecoveryFiles.java",
+      "sha256": "931c03fca41443e2170da8ff97320f82022f4947d05026675cbb4972aaef8eb6",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/RecoveryFiles.java.md",
+      "guideSha256": "d82f3f7e1646234b6c4df8637a098e1430bd4261df1a9919510a4999d4961117",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/ReplyGesture.java",
+      "sha256": "d0e847be0d9cf1ad5759440b6372082a305d04d33711e2cb2e390a4080b3e718",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/ReplyGesture.java.md",
+      "guideSha256": "a4b5adb8bf6556dd1af5363eeec732ae923322231017f192807cd754d5b23ca1",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Repository.java",
+      "sha256": "17725ffdeeab6c85bf4d6ea4298a7fb2d5f8e4bf637dbdc987e4e58c08224df2",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/Repository.java.md",
+      "guideSha256": "133a9b77947bc686dec618bc0e489fe7d3d2a7f8dca9321d91b89bd069ad6d46",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SendButton.java",
+      "sha256": "4f049b88819e6a909eb34e782678a12090bc8415812074132e27d62f8b9c1378",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/SendButton.java.md",
+      "guideSha256": "15a761f96eaa71da3c7640be067c243cfc37d70994bf7c2a5b271b5eef917c0e",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Session.java",
+      "sha256": "e4762a552978600e2bde869de5f2913616ad7c693c97cce4faf3fcad868bab49",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/Session.java.md",
+      "guideSha256": "f7b95a80c32b130859c843a7f4a1868a105fed69ac3d14474cc615c27a5abb3c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SettingsActivity.java",
+      "sha256": "3948b59713295e4bab940aaf5a7b00d3a3e2ffae98e915f9bc65a9b295ffafcb",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/SettingsActivity.java.md",
+      "guideSha256": "6c623bd16dc7c287230993aa1200af5827f2c633bc250a994d6ffaf59aceb37e",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SignupCheck.java",
+      "sha256": "a6a1630383d6cfce622f44de095ce8de36ca9d2d9beeeec7a84c21bbda02c6a2",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/SignupCheck.java.md",
+      "guideSha256": "627867b6bb2597658e003ae8acdec33a31a7a4158f3ebee98c82028bae51ad39",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SplashActivity.java",
+      "sha256": "6d0cb8d394e4ac75c81eab48651a0c8358ed76137b373800e0359b8773b50db9",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/SplashActivity.java.md",
+      "guideSha256": "5d8c89aefda305ded7f26a2876e68b77a8b04fcab98844f62b5cdc7a4874b909",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/StartupMotion.java",
+      "sha256": "b8ee86ec4e42ca22cb534d662fbf08f7aed0743326fb2256e32c40d335d52f03",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/StartupMotion.java.md",
+      "guideSha256": "cf4c690b33ce3a515470d159789e1697481e4238b91e1df4fe1d4bf15092d5e8",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SyncBudget.java",
+      "sha256": "0946b14eb23e6ca326be7b588df281974c095887b5d99607b30de50d8b70b805",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/SyncBudget.java.md",
+      "guideSha256": "887141fbf10066f9a06ad800d0822967b33bcd460beb4e6c781661dfcbddd5bf",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SyncCoordinator.java",
+      "sha256": "db85cf5cf6aa7c4d46fd1567d720ed2e3a6ac6942c86012310aec959e4b4a8fc",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/SyncCoordinator.java.md",
+      "guideSha256": "664cc792c318ceeaddf9c9c8f3020aa9e25cd6c5cf317610fa7b55504f25953f",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SyncEngine.java",
+      "sha256": "8cdbabfa4716b6aa69aa088b40d6c6effbbc468147e901cc5ff6df2428fb134c",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/SyncEngine.java.md",
+      "guideSha256": "0a74920490c18b035c57534d93a919c080042144b535a888e394173824f7811b",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/SyncPace.java",
+      "sha256": "59e38401b629032db9fb71dbbca629ebd0bcc40bee0f063fbbb402081d597b2b",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/SyncPace.java.md",
+      "guideSha256": "41502c2d276d5d49560bbc5f3cc6ae42f48890420eae99da631513466f022f9c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/TransferActivity.java",
+      "sha256": "d0a914293febf9a8e4937f0169b2cfadb1e839468b16c482ddd72c02c97f92b8",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/TransferActivity.java.md",
+      "guideSha256": "4df68bc78f002e1b518a4ce1f47ecd2195806794bf2f544216de4e66c10134c8",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/TransferArchive.java",
+      "sha256": "943471fa800ea6890d70aee57b387c0ac5d522f9f6f57b35342cc60875a5abf6",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/TransferArchive.java.md",
+      "guideSha256": "f6ea56af9611bd7ae26deaf485078b5ff228c596d8f69132905f59c7bae50136",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/TransferCipher.java",
+      "sha256": "26da6685c3f21f0955fd743853a93f2f73bde0579d7a74126823505c9948c4e2",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/TransferCipher.java.md",
+      "guideSha256": "d54e7d1ee41e83d6f56d06d1063037632c12d97b1bcf1a56c42d41a5481182d5",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/TransferFiles.java",
+      "sha256": "83aada765e1d9af639dae7a35c6dc167a16846978c3d5e28e18a7e8628ad0321",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/TransferFiles.java.md",
+      "guideSha256": "0e573c4097d22d347c952a87cbfefda8232d67ea01e285a223c298e0d7bbd237",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/TransferPhrase.java",
+      "sha256": "607152bef1102c6ad88067554864c46f8109c9d4dfb2443ad685c899fe2f9630",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/TransferPhrase.java.md",
+      "guideSha256": "daf2c2f17fe8731692d37b0a0c90e1105717447243c404d99da7d870584f875c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Ui.java",
+      "sha256": "b11b437ac51f8a749a36284986265ea00ce12f868359a2bbe20e490ad2116672",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/Ui.java.md",
+      "guideSha256": "98c08444929777a874d6d2dbf7bc62a8c664af436e3e2b18761b2b7eb041b045",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Validation.java",
+      "sha256": "0c5e336d1849e23c7286fb5f214322f4e49c95ddd277bf5caafd13a617ed888d",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/Validation.java.md",
+      "guideSha256": "3379cc525639ecd4310507e304cbf0e9cd9884b29f1a499415acd1c66713f2a1",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/java/com/priperi/Vault.java",
+      "sha256": "1b8ce39bcdb707a1339055e6888f7628b713a806de35ad02d6f3a3c083a3dcf0",
+      "guide": "docs/files/priperi/app/src/main/java/com/priperi/Vault.java.md",
+      "guideSha256": "1fba17cf99f2235fad693a9c996462b80ae7fb93109a6a5e2254a8b4cf932c41",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "sha256": "d4373811e61f059c84cfbd85acdc854c9d13c1a08f26a67f55bb5588feedd3fd",
+      "guide": "docs/files/priperi/app/src/main/res/drawable/ic_launcher_foreground.xml.md",
+      "guideSha256": "75124d8a7e14e9e25af337c9fd49fb515d8f86026fc085cd95b54caf15f4be2e",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/drawable/ic_notification.xml",
+      "sha256": "712d0cdd21d8e6d366c06dd5153c943e2f12aa201fdf1e2510defb0e9439ee79",
+      "guide": "docs/files/priperi/app/src/main/res/drawable/ic_notification.xml.md",
+      "guideSha256": "e423f459461da995c8c443c8708f6af08fc2ddb315dea167e552f6e05e3c1ba3",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "sha256": "58969dc75ae16e455bb7f1be94e103aeea28e969a9cae8f6de76ed3497219d12",
+      "guide": "docs/files/priperi/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml.md",
+      "guideSha256": "dbdded94e5d141f1a116cf18419c794d4d83eec9552ab09ad134cc58dd43861c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml",
+      "sha256": "2fdc933a6772da38b03beaaa32a4e6be34eebdd70e9d4bd19ba5f13eb2383fad",
+      "guide": "docs/files/priperi/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml.md",
+      "guideSha256": "2f7e61e8be593b874767f9b81f56ee390e3c11c9b4d040ab7b6db91d6218ed34",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/raw/bip39_english.txt",
+      "sha256": "2f5eed53a4727b4bf8880d8f3f199efc90e58503646d9ff8eff3a2ed3b24dbda",
+      "guide": "docs/files/priperi/app/src/main/res/raw/bip39_english.txt.md",
+      "guideSha256": "f3467ea35678a759707ca9b2f26050b5adf7b8c3b09f9949b813ba6f181222bf",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/values-night/colors.xml",
+      "sha256": "a6365134f81a6a55e652717757f63332495c168ae20793eea72d8406f2164095",
+      "guide": "docs/files/priperi/app/src/main/res/values-night/colors.xml.md",
+      "guideSha256": "cbf4e91db06cd4b4449c4b547120dcf574352c3e5f1b79462a433bc6bad55dd5",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/values-night/styles.xml",
+      "sha256": "8653f8212943f14e04faabc164a5e0f267ef1766ea73205d6c678be979a94c43",
+      "guide": "docs/files/priperi/app/src/main/res/values-night/styles.xml.md",
+      "guideSha256": "914625757676bd0e99318950b7e7567ab528d6e3e4991ead3c6c2e7cc10266de",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/values/colors.xml",
+      "sha256": "fc33f5028da4a575d73822e593ec423350309a463aa40da5ee3b28f4af640d0c",
+      "guide": "docs/files/priperi/app/src/main/res/values/colors.xml.md",
+      "guideSha256": "d64211eff37ef5ea8b08f2c2efa327ae5d0699b15a7e412e47cfbd7027b6d7d4",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/values/nfc.xml",
+      "sha256": "3719f95d942fd49236ea584b49ee81f0daa7279172149245aa51db8bb7509075",
+      "guide": "docs/files/priperi/app/src/main/res/values/nfc.xml.md",
+      "guideSha256": "02cdc21ade96f6ff42afd74a21f701398e4357c6698a1c0627af7d75e1c96f3c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/values/secrets.xml",
+      "sha256": "4024c187d3e6be92977d0fd4cba79024573845997bdc049635fd0fc7933220c5",
+      "guide": "docs/files/priperi/app/src/main/res/values/secrets.xml.md",
+      "guideSha256": "4c82c67b53e0a702f33554c057744199479fb25aa4b0c416866902bc4273c20e",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/main/res/values/strings.xml",
+      "sha256": "b90a12fdc11e67f9935fa880ed2ad701c4c0b96fb58e495726097a5eeb03ca64",
+      "guide": "docs/files/priperi/app/src/main/res/values/strings.xml.md",
+      "guideSha256": "ac99b1297866f79d47fa65c9e48cc35cd5b3a5b664383e1e70ab5415d2be0713",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/values/styles.xml",
+      "sha256": "d852040a4e4d9178aab381351b56d118208f626eb478414e3ada226a72e7c6c3",
+      "guide": "docs/files/priperi/app/src/main/res/values/styles.xml.md",
+      "guideSha256": "9ddd4d0a01cad14898c34db9b9414d2543fc4e379734b9cabc00b43607cc5663",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/xml/backup_rules.xml",
+      "sha256": "a5c5d03527ce5b633f55f3555f7ea3ba1325ec53d6bae6f51119ae4aba2fa635",
+      "guide": "docs/files/priperi/app/src/main/res/xml/backup_rules.xml.md",
+      "guideSha256": "32dfba12308affa14f6fbf917572a14aaec53c9d3b1a7afbc52a4a46c800f15d",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/xml/data_extraction_rules.xml",
+      "sha256": "862a43616d5d4437fdec61349d5945aa392369e8471403cf961cf1c7ebeb8aca",
+      "guide": "docs/files/priperi/app/src/main/res/xml/data_extraction_rules.xml.md",
+      "guideSha256": "385957862b3a54e631e0a628f0fd39c76a2f0e43bf1f7668a95734ac24be53dd",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/xml/network_security_config.xml",
+      "sha256": "12c5ef810c159e709efd542129c2439100343e1e176502749d2bf3c1d929010b",
+      "guide": "docs/files/priperi/app/src/main/res/xml/network_security_config.xml.md",
+      "guideSha256": "f6ddb771903eb0f4c96e07b8681a3b5a0638bc86ea1bc4fe5f551a59e77afbe1",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/main/res/xml/nfc_contact_service.xml",
+      "sha256": "eb585542cc6208a4670d1ff1de9ff381136e76b98742eaccc037e501bde5a5ef",
+      "guide": "docs/files/priperi/app/src/main/res/xml/nfc_contact_service.xml.md",
+      "guideSha256": "a6a1db38d9054d41bde21d43f8ba7ede76ea6e09e286717f247db72be07a859f",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/BackupCodecTest.java",
+      "sha256": "bbe43e5659fabc817e1d7b29702b5e0b8eb46a817d06e4101fd5765effdb3128",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/BackupCodecTest.java.md",
+      "guideSha256": "65ac43ae49d98e373a01d0b3610e33671e9679eea2ff5433198ff146caa0da53",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/ContactAllowanceTest.java",
+      "sha256": "4ee7108965277df6d5352b8113074cbdd23bfc8b088e973160580f0dba25a239",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/ContactAllowanceTest.java.md",
+      "guideSha256": "592563108f2ee4901c0cf4b6ce41dcfa6d1008af446235ecb7365131ce8d4f6b",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/ContactCodeTest.java",
+      "sha256": "534fd92b002d4a881333275e8a2661c875b902b6130daa185baca516062a20f9",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/ContactCodeTest.java.md",
+      "guideSha256": "71afd031804ab6f55ffae5cc9dce84b635ce98d2be7817e1b8095ab576098927",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/DeviceSecurityTest.java",
+      "sha256": "f8468948a75c2b0075d00f618a2b8a3d0fe3348244dc6091ccce1f9812b06e95",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/DeviceSecurityTest.java.md",
+      "guideSha256": "b99463a4a9c1bf8c5a2a0770195e354bc52280b5ea827cffc599f1a422e6b036",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/JsonBoundsTest.java",
+      "sha256": "4934d24476968d80bb30eb9e6f12e866ae75fe976f6888e62ad23667f90c9f8f",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/JsonBoundsTest.java.md",
+      "guideSha256": "dad424a8ce81f20cc3c6f6205cefe8da4c98a64804f8cb6c41b36c92492747ed",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/MessageContentTest.java",
+      "sha256": "8d3a5d2b6edf01c8989a4831094f1a7f268aa975528f9578b4d75378c58ebf18",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/MessageContentTest.java.md",
+      "guideSha256": "a6ef78e990932ad3d3a8bf16a8ff67a91755cc267811ac948d35c4b3681eeda7",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/MessageLinksTest.java",
+      "sha256": "d638e4029e5b24f2120383e158425ef02f05bd0ec6d474224a40733435a30c4f",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/MessageLinksTest.java.md",
+      "guideSha256": "f25a8244c882faaf24e7ec82a1a89fb75161bab5b6ef574b3d98e5619a1d0a07",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/NfcProtocolTest.java",
+      "sha256": "8384a8d33526a3b02faa7081c27bfc523b0070d1dc4d4b49ca7736f044195fce",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/NfcProtocolTest.java.md",
+      "guideSha256": "4c3eb7acab727b967028c2d007afc3913174bf08420a3b794edae59ff3b04cce",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/NfcShareLeaseTest.java",
+      "sha256": "7ce1ec8566afa5c112af57fdcf6ff775f91c74d4a1389ab085e9134a147f3c61",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/NfcShareLeaseTest.java.md",
+      "guideSha256": "be72373e09e4842815a9811722c57176870765eefcea19c1daec7e5bf9cba4dd",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/RecordCodecTest.java",
+      "sha256": "73a847e3d85a70e65dacc2bbf2429a0cc100592be2c6ccf3a5423bff67e5e352",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/RecordCodecTest.java.md",
+      "guideSha256": "3d9d3e44cf12a5d6ce51ed32d2c4261c65b8f3a0e6f537daf24bc5e1c307f650",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/RecoveryBundleTest.java",
+      "sha256": "54c06e021a797e0a8e7bf3686bd3a0e91c36b0168508db06657f817c64b081ee",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/RecoveryBundleTest.java.md",
+      "guideSha256": "6d9e729717f93d05e643dfbd6f81f8bf357c956a7e9071b1ff84849cf9c17a4e",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/RecoveryCipherTest.java",
+      "sha256": "063c5d38527541f831a612321c1e43963b9793eafcba836be8f7267a860fa953",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/RecoveryCipherTest.java.md",
+      "guideSha256": "4521c6bc54220b22fc85a61b6506702b6a715158da5e5c374361854abdb2a68d",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/SyncBudgetTest.java",
+      "sha256": "94ff72c618b625ccf7cc4c2ed7f5b7ce944e1d563f4feee37c6f46b77e48ab0f",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/SyncBudgetTest.java.md",
+      "guideSha256": "25850049fa8526fd9d035b3b24989debcd586ea4aad916b96cc761c38c1ca395",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/SyncPaceTest.java",
+      "sha256": "cf6c61e8fc850514974f77774f9626edd7612a55bc2d1bd5820e3561033f5297",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/SyncPaceTest.java.md",
+      "guideSha256": "4194d9fba28afce193f5fe7fa0210660e7bbfaa5b4a7dd1d722f0a15fcbda153",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/TransferFormatsTest.java",
+      "sha256": "ff98dbb6beeffc10284e18d796332241de18121799c36da26dd9f3ee273f0588",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/TransferFormatsTest.java.md",
+      "guideSha256": "5f4ccca27de0b53983b00bea24bb7a9fe1fb941f10f377717a6b1abb15581ed0",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/app/src/test/java/com/priperi/ValidationTest.java",
+      "sha256": "7fc556b59956c350bed8090326d90daee2ced3feade42b3758e01e07cfd1fae5",
+      "guide": "docs/files/priperi/app/src/test/java/com/priperi/ValidationTest.java.md",
+      "guideSha256": "61acc9448109c825b103db3d447937a37d58c6731a44125acd651abbf5f0e6fa",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/build.gradle",
+      "sha256": "6e94fd7d3deb45d681a1a2c33d78e47bfcabcfcfbbebc9edc156791d292006d9",
+      "guide": "docs/files/priperi/build.gradle.md",
+      "guideSha256": "71508f8e396b120ededb2a36c7a79508b01c4ec11204106660028d6a5f311946",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/gradle.properties",
+      "sha256": "614bf6b96a3d651de0563123b5f7d193bcbb05d749d05872e28c4b171a6bb597",
+      "guide": "docs/files/priperi/gradle.properties.md",
+      "guideSha256": "bcbcf4ee5e0cc43a4681acce78dc2a4f460ac959c759864b4ed1c89523882b4f",
+      "origin": "source",
+      "sanitizedOrRewritten": true
+    },
+    {
+      "path": "priperi/gradle/wrapper/gradle-wrapper.jar",
+      "sha256": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f",
+      "guide": "docs/files/priperi/gradle/wrapper/gradle-wrapper.jar.md",
+      "guideSha256": "aa4aeccf83f3f48e7bd5777e36ae05df88c081e0384d2e2fb6b1990d22206f58",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/gradle/wrapper/gradle-wrapper.properties",
+      "sha256": "b05fd036cd3ac6b1e9a065ed55a0253790d0b00f72c2da2cc25cced52e4cb1d5",
+      "guide": "docs/files/priperi/gradle/wrapper/gradle-wrapper.properties.md",
+      "guideSha256": "1b437d062c63e6779c32d619aa33b4c6bb526ad1b87020f149c5f0b5ebd2efc7",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/gradlew",
+      "sha256": "734b3879d3501dce471cf0522d3bcbafe76873d9fc5129345b67fb43bd15e933",
+      "guide": "docs/files/priperi/gradlew.md",
+      "guideSha256": "dde9ec4a5750b2d604cb452e451e4b48ffb39d5fe00dacfb9a3f36bb90d72118",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/gradlew.bat",
+      "sha256": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f",
+      "guide": "docs/files/priperi/gradlew.bat.md",
+      "guideSha256": "639ed43ea5c44ce5648c78899045bb6f6b9cfcc050094a517dc9459d02642b1c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "priperi/settings.gradle",
+      "sha256": "9317c57f4785af3622f913f9d5acc710ba0ca165cfd73dda3957c31d3229f93c",
+      "guide": "docs/files/priperi/settings.gradle.md",
+      "guideSha256": "80b5e6be07ad3c1ed671c38c299071c867d951705c96818001d8f55bf5e8fae2",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/android-test-batches.json",
+      "sha256": "eef0b2dec619ae7a8fd1f1ee785037fe85c998dd9b411d4795cbea52e60c846d",
+      "guide": "docs/files/tools/android-test-batches.json.md",
+      "guideSha256": "69be499fbe5072bee0406ef65425748600162a70d242fa43efa5c8114757bc25",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/check-github-export.py",
+      "sha256": "37b9ce935a0d2e206e9473048f639857a15820df79f6abb4bfcf901ee6f6007c",
+      "guide": "docs/files/tools/check-github-export.py.md",
+      "guideSha256": "c8f612b9c4557b5ab00a70683b142a97342ef9b3393645be605f2c51376c1e66",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/github-content/BUILD.md",
+      "sha256": "23c6756a7bd8bbd93c886de79a4063a71ab2cda3eef656bac8dc0418e1749fa0",
+      "guide": "docs/files/tools/github-content/BUILD.md.md",
+      "guideSha256": "34c58faeba57bee1b85e2e712bf5f06bbd0e6f3e3bf0e25e8a25f3864ed0420c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/github-content/CLOUD-SETUP.md",
+      "sha256": "cd6e5adf6f2793d17da2302aa3a987ac4aa06c2517df8459f6cbfc2e7dfa0c07",
+      "guide": "docs/files/tools/github-content/CLOUD-SETUP.md.md",
+      "guideSha256": "b5c6a4d541e04a4837e77ee816b0ffbe843d0e71501e8313fc617f4560cc1544",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/github-content/CONFIGURATION.md",
+      "sha256": "fa16c23db51df46b3de65d4bbae64e85dd409cab87d7699e76dc0094b6788e2b",
+      "guide": "docs/files/tools/github-content/CONFIGURATION.md.md",
+      "guideSha256": "98e77c2ccc7ea135997e8977360fb14510abcc9b74e6968d2c3f1c7adadc765c",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/github-content/EXPORT-VERIFICATION.md",
+      "sha256": "7fac675cc3796e0f22df0fe637c713305f35ddf1445cc61a69d9a553a730dca0",
+      "guide": "docs/files/tools/github-content/EXPORT-VERIFICATION.md.md",
+      "guideSha256": "86d14f87df9960403b5f76c47590e8e809420891709c91907cab8fb4dc3f1f8d",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/github-content/EXPORT.md",
+      "sha256": "be661edaf14fb594622d91120d6c11cb0385d2b4f9f2429b21bf6ed69146a98f",
+      "guide": "docs/files/tools/github-content/EXPORT.md.md",
+      "guideSha256": "576e3aaa46c5ea545d631d2f8e7d60292f07278cdcdaa789ea77016d8b16beb6",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/github-content/GITHUB.md",
+      "sha256": "61d9a60b2fb589f7374bf71c605536de0c154720dcb5460201db611d4567cf7b",
+      "guide": "docs/files/tools/github-content/GITHUB.md.md",
+      "guideSha256": "a0488539089317d40f9d2c6791476135e0919f89e6732888502c1b83875b7bb2",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/github-content/PIPELINE.md",
+      "sha256": "7c5d0b8eceb9691663b08e2859c66d290e749bf56db8b3c7f54c9bb48284def0",
+      "guide": "docs/files/tools/github-content/PIPELINE.md.md",
+      "guideSha256": "08beac128aeaf792cfa47534156b4f491455a47f8e90b819f79812eb290f4dad",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/github-content/README.md",
+      "sha256": "e221dd83e0c0536567f9c7edf4a75b6484da7073d1390e284c0d4b2131c19b92",
+      "guide": "docs/files/tools/github-content/README.md.md",
+      "guideSha256": "ee27d31310e0d428dbe462c68f6e5065f9d0e83b5c698a405f8a105307044f08",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/github-content/SECURITY-OVERVIEW.md",
+      "sha256": "981452c76fdf1142fa347cba5c5e76c220c25dee6db70e01475260cec9a88ddb",
+      "guide": "docs/files/tools/github-content/SECURITY-OVERVIEW.md.md",
+      "guideSha256": "a2e35e152237335f6a2303e4cf1747e0d4c462454c6ff327076ab49b8d9b87bf",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/github-content/TESTING.md",
+      "sha256": "06afb5162b9a67c47211b468f0392c88bfeec672d29cbcf11646ea1bfdfcd468",
+      "guide": "docs/files/tools/github-content/TESTING.md.md",
+      "guideSha256": "99f56255c16b83ef278fb939faa9be9e8da01944fba9eebaaf6036224555a13f",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/prepare-github.py",
+      "sha256": "c9deac0ad2e510d6cc617ec30d2e0758afe8b8d389db46cfaef8ee211239619c",
+      "guide": "docs/files/tools/prepare-github.py.md",
+      "guideSha256": "cacfcd34bf6fbeceaf32d6483cf3eef134baf180d073f2050ca53b233a6655a0",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    },
+    {
+      "path": "tools/run-android-regressions.py",
+      "sha256": "638ac9157935af1c426d7bbe6b82b194fb3648b25f305c045d3165b113f07457",
+      "guide": "docs/files/tools/run-android-regressions.py.md",
+      "guideSha256": "138546c57f944f36e868f41700bb6556eb95584a2a62f0e20678ab8bbe72535a",
+      "origin": "source",
+      "sanitizedOrRewritten": false
+    }
+  ],
+  "excludedCategories": [
+    "User accounts/messages/keys/sessions/recovery material",
+    "Working private credentials and original public project connections",
+    "Git history and owner checkpoints",
+    "Raw private evidence, logs, screenshots and recordings",
+    "Historical duplicate code snapshots and one-off patch/evidence scripts",
+    "Build outputs, old APKs, caches and downloaded dependencies"
+  ],
+  "notes": "Current reusable source and policy are included. Portable regression runner replaces machine-specific private orchestration. Original live services and user files were not modified."
+}

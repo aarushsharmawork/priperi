@@ -1,0 +1,12 @@
+package com.priperi;
+import java.io.*;import java.util.*;
+/** Bounded encrypted identity followed by the existing signed encrypted history stream. */
+final class RecoveryBundle {
+ static final long MAX_BYTES=TransferArchive.MAX_BYTES+32768;private static final byte[] MAGIC="PRIPRB01".getBytes(java.nio.charset.StandardCharsets.US_ASCII);
+ static void write(File output,byte[] capsule,File history)throws Exception{if(capsule.length<37||capsule.length>RecoveryCipher.MAX+36||history.length()>TransferArchive.MAX_BYTES)throw new IOException("Recovery backup is too large");try(DataOutputStream out=new DataOutputStream(new FileOutputStream(output));InputStream in=new FileInputStream(history)){out.write(MAGIC);out.writeInt(capsule.length);out.write(capsule);copy(in,out,TransferArchive.MAX_BYTES);}}
+ static byte[] unpack(File input,File history)throws Exception{if(input.length()>MAX_BYTES)throw new IOException("Recovery backup is too large");try(DataInputStream in=new DataInputStream(new FileInputStream(input));OutputStream out=new FileOutputStream(history)){byte[] magic=new byte[8];in.readFully(magic);if(!Arrays.equals(magic,MAGIC))throw new IOException("Select a Priperi recovery backup");int size=in.readInt();if(size<37||size>RecoveryCipher.MAX+36)throw new IOException("Invalid recovery backup");byte[] capsule=new byte[size];in.readFully(capsule);copy(in,out,TransferArchive.MAX_BYTES);return capsule;}catch(Exception e){history.delete();throw e;}}
+ static void copy(InputStream in,OutputStream out,long max)throws IOException{byte[] bytes=new byte[32768];long count=0;try{for(int n;(n=in.read(bytes))!=-1;){count+=n;if(count>max)throw new IOException("Recovery backup is too large");out.write(bytes,0,n);}out.flush();}finally{Arrays.fill(bytes,(byte)0);}}
+ static void verifyCopy(File original,InputStream saved)throws Exception{byte[] expected;try(InputStream input=new FileInputStream(original)){expected=digest(input);}if(!java.security.MessageDigest.isEqual(expected,digest(saved)))throw new IOException("The saved recovery file could not be verified");}
+ private static byte[] digest(InputStream in)throws Exception{java.security.MessageDigest digest=java.security.MessageDigest.getInstance("SHA-256");byte[] buffer=new byte[32768];long count=0;try{for(int n;(n=in.read(buffer))!=-1;){count+=n;if(count>MAX_BYTES)throw new IOException("Recovery backup is too large");digest.update(buffer,0,n);}return digest.digest();}finally{Arrays.fill(buffer,(byte)0);}}
+ private RecoveryBundle(){}
+}

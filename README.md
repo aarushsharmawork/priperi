@@ -1,109 +1,50 @@
-# Priperi — Firebase Auth & Admin Panel System
+# Priperi
 
-![Status](https://img.shields.io/badge/Status-Under_Development-orange)
-![Platform](https://img.shields.io/badge/Platform-Android_Java-brightgreen)
-![Backend](https://img.shields.io/badge/Backend-Firebase_Auth-FFCA28)
-![Admin](https://img.shields.io/badge/Admin-Dedicated_Control_Panel-purple)
+[Developer roadmap](docs/PIPELINE.md) · [File index](docs/FILE-INDEX.md)
 
-**Priperi** is an Android ecosystem consisting of two dedicated applications:
-1. **Client Application (`priperi`)**: For end-user login, authentication, and session handling.
-2. **Admin Panel Application (`Adminpanel`)**: A dedicated administrative tool for creating, registering, and provisioning user credentials.
+Priperi is an Android chat app. This folder contains the Android screens, encrypted local storage, message protocol, Supabase server, SQL migrations, Firebase push configuration, tests and build tools. There is no separate web frontend. The Android app is the frontend.
 
----
+This export is based on version 2.15.0, version code 47. It includes pinned chats. It has no saved accounts, messages, recovery words, private signing keys or working cloud credentials. Connection fields are empty or marked `PASTE_...`. Use your own projects and keys.
 
-## 🛠️ System Architecture
+Start with [Build the Android app](docs/BUILD.md), then [Set up the cloud services](docs/CLOUD-SETUP.md). [Configuration](docs/CONFIGURATION.md) lists every value you need to supply and where it belongs. [Tests](docs/TESTING.md) explains local checks. [File guide](docs/FILE-INDEX.md) links to a separate explanation for every source, configuration, test, asset and top-level guide in this export.
 
-```text
-                               ┌────────────────────────────────┐
-                               │     Firebase Console / Auth    │
-                               │  (Project ID: Loginsysaarush)  │
-                               └──────────────┬─────────────────┘
-                                              │
-                       ┌──────────────────────┴──────────────────────┐
-                       │                                             │
-                       ▼                                             ▼
-          ┌──────────────────────────┐                  ┌──────────────────────────┐
-          │     Admin Panel App      │                  │        Client App        │
-          │       (Adminpanel)       │                  │        (priperi)         │
-          ├──────────────────────────┤                  ├──────────────────────────┤
-          │ • Create user accounts   │                  │ • User authentication    │
-          │ • Push credentials       │                  │ • Password show/hide     │
-          │ • Provision access       │                  │ • Animated touch feedback│
-          └──────────────────────────┘                  │ • Local session tracking │
-                                                        └──────────────────────────┘
-```
+## What is here
 
----
+| Folder | Contents |
+| --- | --- |
+| `priperi/` | Android app, Gradle wrapper, resources and Android/JVM tests |
+| `backend/supabase/functions/relay/` | Server request handling, login, groups, recovery, signup verification and push |
+| `backend/supabase/migrations/` | Database schema, access rules, quotas and cleanup jobs; migrations 001–017 |
+| `backend/deployment/` | Cloud setup notes, push sender role and legacy Firebase deny-all rules |
+| `backend/qa/` | Local emulator server and explicitly opted-in hosted checks |
+| `tools/` | Export and portable regression tools; guide templates |
+| `docs/` | Setup, pipeline, security, historical reviews and per-file notes |
+| `config/` | Examples showing where private server values go |
 
-##  Admin Panel App (`Adminpanel`)
+## How a message travels
 
-The **Admin Panel** is a separate, dedicated administrative utility designed for managing user onboarding and system control without exposing sign-up logic inside the client application.
+1. The user signs in on the registered installation. The server checks the password and installation proof.
+2. The phone encrypts and signs a message before sending it over HTTPS.
+3. The relay checks the current session, device binding, sender, recipient, permissions and request limits. SQL stores the encrypted envelope temporarily.
+4. The receiving phone downloads it, checks it and saves it to encrypted local storage before acknowledging delivery.
+5. An optional Firebase push wakes the app. It contains a generic hint, not the message text or sender name.
 
-### Key Capabilities:
-- **User Account Provisioning**: Uses Firebase Auth `createUserWithEmailAndPassword` to create and register authorized user accounts directly into the `Loginsysaarush` database.
-- **Credential Dispatch ("Push")**: Admin enters target user email (`mail_id`) and password (`usr_pass`) to register new accounts.
-- **Access Control Isolation**: Ensures client app users cannot create accounts independently; all valid credentials must be issued through the Admin Panel.
+Read [Pipeline](docs/PIPELINE.md) for the build and deployment sequence.
 
----
+## Security
 
-##  Client App (`priperi`)
+Chat content is encrypted on the phones and in local storage. Private Android screens are not public entry points. Android's automatic app backup is disabled. Private server tables use row-level security and are not granted directly to app clients. Protected requests still check JWT signatures, live sessions and installation proof even though the relay's outer JWT gateway is disabled for pre-login routes.
 
-The **Client Application** provides a polished, interactive login interface for end users.
+These controls have limits. First-contact key comparison is optional, so trusting only a username trusts the directory's first key. Changed saved keys are rejected. The protocol does not provide Signal-style forward secrecy. The server can still observe account and delivery metadata. A compromised phone can bypass app-side biometric or device checks. Deleting a message or account cannot erase another person's external copy, an exported backup or provider-retained records. See [Security](docs/SECURITY-OVERVIEW.md).
 
-### Key Features:
-- **Firebase Login**: Authenticates existing accounts using `signInWithEmailAndPassword`.
-- **Interactive UI & Animations**:
-  - Touch-scale spring effect on the login button (`MotionEvent`).
-  - Animated multi-stage loading progress indicator (`Please Wait.`, `Please Wait..`, `Please Wait...`).
-  - Toggle password visibility with an eye icon.
-- **Session Management**:
-  - Remembers logged-in user state via `SharedPreferences`.
-  - Displays authenticated dashboard in `AfterActivity` with session timestamp calculations (+2h 30m).
-  - Exit confirmation alert dialog on back-button press.
+## Cloud status
 
----
+The source includes a prepared Turnstile signup-verification update in migration 017. At export time, the original deployment was recorded as using 001–016; 017 was not activated there. On your own new project, configure the real provider, deploy the matching relay and apply 017 after 016. Local fake-provider tests are not proof that a real widget works on physical phones.
 
-##  Repository Structure
+There is no automatic production deployment in this folder. Cloud changes and production signing are manual. The original project's private keys are intentionally absent. You can build the same app code with your own configuration, but cannot reproduce its original signing identity or install over that identity without the original signing key.
 
-```text
-priperi/
-├── priperi/                # Client Android Application
-│   ├── app/src/main/
-│   │   ├── java/com/priperi/
-│   │   │   ├── MainActivity.java      # Client login & UI logic
-│   │   │   └── AfterActivity.java     # User dashboard & session screen
-│   │   └── res/
-│   │       ├── layout/                # main.xml, after.xml
-│   │       └── values/secrets.xml     # Shared Firebase credentials
-│   └── build.gradle
-├── Adminpanel/             # Admin Panel Android Application
-│   ├── app/src/main/
-│   │   ├── java/com/adminpanel/
-│   │   │   └── MainActivity.java      # Admin provisioning screen
-│   │   └── res/
-│   │       ├── layout/main.xml        # Admin layout
-│   │       └── values/secrets.xml     # Shared Firebase credentials
-│   └── build.gradle
-├── priperi_1.0.apk         # Pre-compiled Client Application APK
-└── Adminpanel_1.0.apk      # Pre-compiled Admin Panel APK
-```
+## Before sharing an APK
 
----
+Run local tests, build without emulator allowances, configure your own services, sign with your own release key and test on physical phones. Keep the signing key outside Git. The `secureTest` variant uses a local development key and is for private testing; `release` builds unsigned until you sign it.
 
-##  Security Analysis & Firebase Rules
-
-> [!IMPORTANT]
-> **API Keys & Firebase Authentication**:
-> Firebase API keys embedded in client applications are public project identifiers. Anyone with the API key can make requests to Firebase API endpoints unless access is strictly restricted on the backend.
-
-### Recommended Admin & Client Hardening:
-1. **Disable Public Sign-Up in Firebase**: Turn off self-registration in the Firebase Console so accounts can only be created via the Admin Panel.
-2. **Role-Based Access Control (RBAC)**: Tag Admin Panel user accounts with custom claims (`admin: true`) via Firebase Admin SDK.
-3. **App Check Protection**: Enable Firebase App Check (Play Integrity) to enforce that only verified APK builds of `priperi` and `Adminpanel` can interact with Firebase services.
-
----
-
-##  Build Artifacts
-Pre-built APKs are included in the project root:
-- [Adminpanel_1.0.apk](file:///Users/aarushsharma/priperi/priperi/Adminpanel_1.0.apk): Admin Control Panel APK
-- [priperi_1.0.apk](file:///Users/aarushsharma/priperi/priperi/priperi_1.0.apk): Client User App APK
+No license has been supplied for the project as a whole. Check rights before redistributing it. The included BIP-39 notice covers that bundled word list.

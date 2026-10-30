@@ -1,0 +1,7 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Legacy database access stays disabled. App data uses Supabase.
+    match /{document=**} { allow read, write: if false; }
+  }
+}

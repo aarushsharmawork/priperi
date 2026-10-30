@@ -1,0 +1,2 @@
+# Copy to priperi/local.properties and use your SDK folder.
+sdk.dir=/absolute/path/to/your/Android/sdk

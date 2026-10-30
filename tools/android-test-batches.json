@@ -1,0 +1,79 @@
+{
+  "input-boundaries": [
+    "DocumentResultTest",
+    "NetworkInputTest"
+  ],
+  "contact-trust": [
+    "ContactTrustTest"
+  ],
+  "resilience": [
+    "ResilienceFlowTest"
+  ],
+  "account-controls": [
+    "AccountControlsFlowTest"
+  ],
+  "recovery-reinstall": [
+    "RecoveryFlowTest",
+    "ReinstallReplacementTest",
+    "ReinstallRecoveryTest"
+  ],
+  "message-approval": [
+    "MessageActionsFlowTest",
+    "ContactApprovalTest"
+  ],
+  "group-backup": [
+    "GroupFlowTest",
+    "BackupFlowTest"
+  ],
+  "notification": [
+    "NotificationRecoveryTest",
+    "ConversationAlertsTest"
+  ],
+  "sync-responsiveness": [
+    "SyncResponsivenessTest"
+  ],
+  "async-delivery": [
+    "AsyncDeliveryTest"
+  ],
+  "navigation": [
+    "NavigationRecoveryTest"
+  ],
+  "contact-exchange": [
+    "NfcFlowTest",
+    "ContactCodeFlowTest"
+  ],
+  "interface": [
+    "FeatureTenFlowTest"
+  ],
+  "storage-security": [
+    "SecurityBoundaryTest",
+    "StorageFlowTest",
+    "CryptoStorageTest",
+    "AutomaticStorageTest",
+    "SyncIndexTest"
+  ],
+  "network-reconnect": [
+    "BatteryFlowTest"
+  ],
+  "relay-device": [
+    "RelayFlowTest",
+    "DeviceFlowTest",
+    "DeliveryLatencyTest"
+  ],
+  "chat-pinning": [
+    "ChatPinFlowTest"
+  ],
+  "ui-smoke": [
+    "UiSmokeTest#mergedContinueScreenRendersInBothThemes",
+    "UiSmokeTest#returningPhoneShowsOnlyPasswordAfterUsernameChanges",
+    "UiSmokeTest#privateScreensCloseWhenNoSessionExists",
+    "UiSmokeTest#topSearchFindsNewPeopleWithoutOpeningADialog",
+    "UiSmokeTest#inboxChatAndSettingsRenderWithoutExposingOtherActivities"
+  ],
+  "ui-reauth": [
+    "UiSmokeTest#rejectedSessionReturnsToSignInWithoutErasingTheAccount"
+  ],
+  "app-entry": [
+    "AppEntryFlowTest"
+  ]
+}

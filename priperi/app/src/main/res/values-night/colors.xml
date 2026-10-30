@@ -1,0 +1,12 @@
+<resources>
+<color name="accent">#9ADCD2</color>
+<color name="on_accent">#153533</color>
+<color name="page">#11171D</color>
+<color name="surface">#1C252E</color>
+<color name="ink">#ECF2F5</color>
+<color name="muted">#A1B0BC</color>
+<color name="line">#303E49</color>
+<color name="soft">#254447</color>
+<color name="danger">#FFAAB5</color>
+<color name="qr_ink">#F4F8FA</color><color name="qr_paper">@color/page</color>
+</resources>

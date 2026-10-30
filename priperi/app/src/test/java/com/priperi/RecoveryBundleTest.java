@@ -1,0 +1,5 @@
+package com.priperi;
+import org.junit.Test;import java.io.*;import java.nio.file.*;import static org.junit.Assert.*;
+public class RecoveryBundleTest {
+ @Test public void boundedOpaqueStreamsRoundTripAndTruncationFails()throws Exception{File history=File.createTempFile("recovery-history",".enc"),bundle=File.createTempFile("recovery-bundle",".enc"),output=File.createTempFile("recovery-output",".enc");try{byte[] encrypted=RecoveryCipher.seal(new byte[]{1,2,3},new byte[32]);Files.write(history.toPath(),new byte[]{8,9,10});RecoveryBundle.write(bundle,encrypted,history);assertArrayEquals(encrypted,RecoveryBundle.unpack(bundle,output));assertArrayEquals(new byte[]{8,9,10},Files.readAllBytes(output.toPath()));try(InputStream saved=new FileInputStream(bundle)){RecoveryBundle.verifyCopy(bundle,saved);}assertThrows(Exception.class,()->RecoveryBundle.verifyCopy(bundle,new ByteArrayInputStream(new byte[]{1,2,3})));Files.write(bundle.toPath(),new byte[]{1,2,3});assertThrows(Exception.class,()->RecoveryBundle.unpack(bundle,output));assertFalse(output.exists());}finally{history.delete();bundle.delete();output.delete();}}
+}

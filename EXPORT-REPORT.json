@@ -1,0 +1,11 @@
+{
+  "payloadFiles": 247,
+  "perFileNotes": 247,
+  "migrations": 17,
+  "payloadAndGuideHashes": "passed",
+  "sourceInventory": "passed",
+  "selectedCredentialPatterns": "passed",
+  "jsonXmlPythonSyntax": "passed",
+  "markdownLinks": "passed",
+  "userDataScope": "No user stores or raw evidence included; source tests use synthetic fixtures. Pattern checks are not a guarantee for arbitrary newly added content."
+}

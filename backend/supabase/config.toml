@@ -1,0 +1,16 @@
+project_id = "priperi"
+
+[auth]
+enable_signup = false
+enable_anonymous_sign_ins = false
+minimum_password_length = 12
+password_requirements = "lower_upper_letters_digits_symbols"
+
+[auth.email]
+enable_signup = false
+enable_confirmations = true
+
+[functions.relay]
+# Continue and signed device reset/status are reachable before login.
+# Protected operations verify a device-bound Auth token, live session and proof.
+verify_jwt = false

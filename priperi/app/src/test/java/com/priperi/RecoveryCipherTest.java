@@ -1,0 +1,7 @@
+package com.priperi;
+import org.junit.Test;import java.util.*;import java.security.SecureRandom;import static org.junit.Assert.*;
+public class RecoveryCipherTest {
+ @Test public void randomSecretAndAuthenticatedFormatRoundTrip()throws Exception{byte[] key=new byte[32];new SecureRandom().nextBytes(key);byte[] text="Private account recovery material".getBytes(java.nio.charset.StandardCharsets.UTF_8);byte[] a=RecoveryCipher.seal(text,key),b=RecoveryCipher.seal(text,key);assertFalse(Arrays.equals(a,b));assertArrayEquals(text,RecoveryCipher.open(a,key));assertArrayEquals(text,RecoveryCipher.open(b,key));}
+ @Test public void wrongWordsAndModifiedHeaderOrCiphertextFailClosed()throws Exception{byte[] key=new byte[32],value=RecoveryCipher.seal(new byte[]{1,2,3},key);for(int index:new int[]{0,8,20,value.length-1}){byte[] bad=value.clone();bad[index]^=1;assertThrows(Exception.class,()->RecoveryCipher.open(bad,key));}byte[] wrong=new byte[32];wrong[0]=1;assertThrows(Exception.class,()->RecoveryCipher.open(value,wrong));}
+ @Test public void invalidSizesDoNotReachDecryption()throws Exception{for(byte[] value:new byte[][]{new byte[0],new byte[36],new byte[RecoveryCipher.MAX+37]})assertThrows(Exception.class,()->RecoveryCipher.open(value,new byte[32]));assertThrows(Exception.class,()->RecoveryCipher.seal(new byte[RecoveryCipher.MAX+1],new byte[32]));assertThrows(Exception.class,()->RecoveryCipher.seal(new byte[]{1},new byte[31]));}
+}
